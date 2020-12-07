@@ -1,7 +1,25 @@
-import "../src/style.css"
+import '../src/style.scss'
+import React, { useState } from 'react';
+import playlists from './playlists.js';
 
 function App() {
+  const [source, setSource] = useState("")
+  let listItems = playlists.map((playlist) => (
+    <><button
+      class="big-button"
+      key={playlist.Name}
+      content={playlist.Name}
+    onClick={() => setSource(playlist.SRC)}
+    >
+      {playlist.Name}
+    </button>
+    <br/></>
+  ));
   
+
+ 
+
+
 
   return (
     <div className="App">
@@ -19,34 +37,28 @@ function App() {
           <div class="row">&nbsp;</div>
           <div class="row">&nbsp;</div>
 
-          <p>List of ambient playlists</p>
-          <p>Silent Hill Ambient</p>
-          <p>Silent Hill Ambient</p>
-          <p>Silent Hill Ambient</p>
-          <p>Silent Hill Ambient</p>
-          <p>Silent Hill Ambient</p>
-          <p>Silent Hill Ambient</p>
-          <p>Silent Hill Ambient</p>
-          <p>Silent Hill Ambient</p>
+     
+          <div>
+            {listItems}
+            </div>
+    
+
+       
+          
         </div>
 
         <div class="column is-three-fifths">
-          <div class="columns">
-            
-
-
-          </div>
+          <div class="columns"></div>
           <div class="row">&nbsp;</div>
           <div class="row">&nbsp;</div>
           <iframe
             class="video"
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/j0-9udYcxOI"
+            src={source}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-          
         </div>
       </div>
     </div>
