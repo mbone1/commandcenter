@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import "../src/style.css"
 
 function App() {
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="has-text-centered">
+        <p class="woo">45:00 </p>
+      </div>
+      <div class="has-text-centered">
+        <form>
+          <span>Length of timer</span>
+          <input></input>
+        </form>
+      </div>
+      <div class="columns">
+        <div class="column is-two-fifths has-text-right">
+          <div class="row">&nbsp;</div>
+          <div class="row">&nbsp;</div>
+
+          <p>List of ambient playlists</p>
+          <p>Silent Hill Ambient</p>
+          <p>Silent Hill Ambient</p>
+          <p>Silent Hill Ambient</p>
+          <p>Silent Hill Ambient</p>
+          <p>Silent Hill Ambient</p>
+          <p>Silent Hill Ambient</p>
+          <p>Silent Hill Ambient</p>
+          <p>Silent Hill Ambient</p>
+        </div>
+
+        <div class="column is-three-fifths">
+          <div class="columns">
+            
+
+
+          </div>
+          <div class="row">&nbsp;</div>
+          <div class="row">&nbsp;</div>
+          <iframe
+            class="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/j0-9udYcxOI"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          
+        </div>
+      </div>
     </div>
   );
 }
