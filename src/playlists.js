@@ -79,6 +79,66 @@ let playlists = [
     Name: "Bang on a Can",
     SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
   },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
+  {
+    Name: "Bang on a Can",
+    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+  },
 ];
 
 export default playlists;

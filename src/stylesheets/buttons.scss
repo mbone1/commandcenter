@@ -1,61 +1,12 @@
-html {
-    background-color: var(--colorShadeB);
-}
-
-.woo {
-    color: white;
-    font-family: 'Monofett', cursive;
-    font-size: 96px;
-}
-
-.video {
-    border-radius: 10px;
-    border: 5px solid var(--colorShadeE);
-    margin-left: 50px;
-    background-color: var(--colorShadeA);
-}
-
-.add {
-    margin-left: 50px;
-}
-
 :root {
-    --backgroundColor: rgba(246, 241, 209);
     --colorShadeA: rgb(92, 85, 85);
     --colorShadeB: rgb(133, 123, 123);
     --colorShadeC: rgb(171, 161, 161);
     --colorShadeD: rgb(201, 193, 193);
     --colorShadeE: rgb(227, 218, 218);
-    // --colorShadeA: rgb(106, 163, 137);
-    // --colorShadeB: rgb(121, 186, 156);
-    // --colorShadeC: rgb(150, 232, 195);
-    // --colorShadeD: rgb(187, 232, 211);
-    // --colorShadeE: rgb(205, 255, 232);
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
-* {
-    box-sizing: border-box;
-}
-
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-/* body {
-    font-family: 'OpenSans', sans-serif;
-    font-size: 1rem;
-    line-height: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    min-height: 100vh;
-    background: var(--backgroundColor);
-} */
-
+//styling
 button {
     position: relative;
     display: inline-block;
@@ -64,7 +15,7 @@ button {
     border: 0;
     vertical-align: middle;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: var(--colorShadeA);
     font-weight: 700;
     text-transform: uppercase;
@@ -78,6 +29,13 @@ button.big-button {
     background: var(--colorShadeE);
     transform-style: preserve-3d;
     transition: all 175ms cubic-bezier(0, 0, 1, 1);
+    margin-right: 10px;
+}
+
+//animations
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 button.big-button::before {

@@ -1,9 +1,14 @@
-import '../src/style.scss'
+import '../src/stylesheets/style.scss'
+import '../src/stylesheets/buttons.scss'
 import React, { useState } from 'react';
 import playlists from './playlists.js';
 
 function App() {
-  const [source, setSource] = useState("")
+  
+  const [source, setSource] = useState("") //variable created to swap 'src' and change video displayed
+  
+  
+  
   //maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
   let listItems = playlists.map((playlist) => (
     <><button
@@ -24,33 +29,18 @@ function App() {
 
   return (
     <div className="App">
-      <div class="has-text-centered">
-        <p class="woo">45:00 </p>
-      </div>
-      <div class="has-text-centered">
-        <form>
-          <span>Length of timer</span>
-          <input></input>
-        </form>
-      </div>
       <div class="columns">
-        <div class="column is-two-fifths has-text-right">
-          <div class="row">&nbsp;</div>
-          <div class="row">&nbsp;</div>
-
-     
-          <div>
-            {listItems}
-            </div>
-    
-
-       
-          
+        <div class="column is-one-fifth has-text-right">
+         
+          <div class="list scroller has-text-right">{listItems}</div>
         </div>
 
-        <div class="column is-three-fifths">
+        <div class="column is-four-fifths">
           <div class="columns"></div>
           <div class="row">&nbsp;</div>
+          <div class="has-text-centered">
+            <p class="woo">45:00 </p>
+          </div>
           <div class="row">&nbsp;</div>
           <iframe
             class="video"
