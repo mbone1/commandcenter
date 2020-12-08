@@ -4,6 +4,7 @@ import playlists from './playlists.js';
 
 function App() {
   const [source, setSource] = useState("")
+  //maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
   let listItems = playlists.map((playlist) => (
     <><button
       class="big-button"
@@ -53,8 +54,8 @@ function App() {
           <div class="row">&nbsp;</div>
           <iframe
             class="video"
-            width="560"
-            height="315"
+            width="840"
+            height="472.5"
             src={source}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -1,32 +1,6 @@
 html {
-    background-color: aqua;
+    background-color: var(--colorShadeB);
 }
-
-
-/* @keyframes bgcolor {
-    0% {
-        background-color: #45a3e5
-    }
-    30% {
-        background-color: #66bf39
-    }
-    60% {
-        background-color: #eb670f
-    }
-    90% {
-        background-color: #f35
-    }
-    100% {
-        background-color: #864cbf
-    }
-}
-
-body {
-    -webkit-animation: bgcolor 20s infinite;
-    animation: bgcolor 10s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-} */
 
 .woo {
     color: white;
@@ -36,9 +10,9 @@ body {
 
 .video {
     border-radius: 10px;
-    border: 5px solid grey;
+    border: 5px solid var(--colorShadeE);
     margin-left: 50px;
-    background-color: black;
+    background-color: var(--colorShadeA);
 }
 
 .add {
@@ -47,11 +21,16 @@ body {
 
 :root {
     --backgroundColor: rgba(246, 241, 209);
-    --colorShadeA: rgb(106, 163, 137);
-    --colorShadeB: rgb(121, 186, 156);
-    --colorShadeC: rgb(150, 232, 195);
-    --colorShadeD: rgb(187, 232, 211);
-    --colorShadeE: rgb(205, 255, 232);
+    --colorShadeA: rgb(92, 85, 85);
+    --colorShadeB: rgb(133, 123, 123);
+    --colorShadeC: rgb(171, 161, 161);
+    --colorShadeD: rgb(201, 193, 193);
+    --colorShadeE: rgb(227, 218, 218);
+    // --colorShadeA: rgb(106, 163, 137);
+    // --colorShadeB: rgb(121, 186, 156);
+    // --colorShadeC: rgb(150, 232, 195);
+    // --colorShadeD: rgb(187, 232, 211);
+    // --colorShadeE: rgb(205, 255, 232);
 }
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
@@ -93,8 +72,8 @@ button {
 }
 
 button.big-button {
-    padding: 1em 2em;
-    border: 2px solid var(--colorShadeA);
+    padding: .4em 2em;
+    border: 1px solid var(--colorShadeA);
     border-radius: 1em;
     background: var(--colorShadeE);
     transform-style: preserve-3d;
