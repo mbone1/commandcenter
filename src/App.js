@@ -13,13 +13,39 @@ function Task({ task }) {
   )
 } 
 
+function TaskForm({ addTask }) {
+  const [value, setValue] = useState("")
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (!value) return;
+    addTask(value);
+    setValue("");
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="input"
+        value={value}
+        onChange={e => setValue(e.target.value)}/>
+    </form>
+  )
+
+
+}
+
+
 function App() {
   
   const [source, setSource] = useState("") //variable created to swap 'src' and change video displayed
-  const [value, setValue] = useState("")
   const [tasks, setTasks] = useState([
     { text: "Rework Front-End"},
   ])
+  const addTask = text => {
+    const newTasks = [...tasks, { text }];
+    setTasks(newTasks)
+  }
   
   
   
@@ -68,6 +94,7 @@ function App() {
           {tasks.map((task, index) => (
             <Task key={index} index={index} task={task} >{task}</Task>
           ))}
+          <TaskForm addTask={addTask}/>
         </div>
       </div>
     </div>
