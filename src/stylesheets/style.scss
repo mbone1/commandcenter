@@ -15,10 +15,13 @@ html {
     background-color: var(--colorShadeB);
 }
 
-.woo {
+.timer {
     color: white;
     font-family: 'Monofett', cursive;
     font-size: 96px;
+    max-height: 400px;
+    max-width: 463px;
+    margin-left: 10px;
 }
 
 .video {
@@ -28,13 +31,8 @@ html {
     background-color: var(--colorShadeA);
 }
 
-.add {
-    margin-left: 50px;
-}
-
 .list {
     overflow-y: auto;
-    // margin-top: -215px;
     max-height: 935px;
     padding-top: 5px;
     padding-bottom: 5px;
