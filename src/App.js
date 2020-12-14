@@ -5,10 +5,13 @@ import playlists from './playlists.js';
 
 
 
-function Task({ task }) {
+function Task({ task, index, completeTask }) {
   return (
     <div className="goal">
       {task.text}
+      <div>
+        <button onClick={()=> completeTask(index)}>Complete</button>
+      </div>
     </div>
   )
 } 
@@ -31,26 +34,37 @@ function TaskForm({ addTask }) {
         onChange={e => setValue(e.target.value)}/>
     </form>
   )
-
-
 }
+
+
 
 
 function App() {
   
   const [source, setSource] = useState("") //variable created to swap 'src' and change video displayed
+
   const [tasks, setTasks] = useState([
-    { text: "Rework Front-End"},
+    {
+      text: "Rework Front-End",
+      isCompleted: false
+    },
   ])
+
   const addTask = text => {
     const newTasks = [...tasks, { text }];
+    setTasks(newTasks)
+  }
+
+  const completeTask = index => {
+    const newTasks = [...tasks];
+    newTasks[index].isCompleted = true;
     setTasks(newTasks)
   }
   
   
   
   //maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
-  let listItems = playlists.map((playlist) => (
+  const listItems = playlists.map((playlist) => (
     <><button
       class="big-button"
       key={playlist.Name}
@@ -92,9 +106,10 @@ function App() {
         <div class="column is-one-fifth">
           Todays goal is{" "}
           {tasks.map((task, index) => (
-            <Task key={index} index={index} task={task} >{task}</Task>
+            <Task key={index} index={index} task={task} completeTask={completeTask} >{task}</Task>
           ))}
-          <TaskForm addTask={addTask}/>
+          <TaskForm addTask={addTask} />
+          
         </div>
       </div>
     </div>
