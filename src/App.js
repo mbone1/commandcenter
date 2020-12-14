@@ -2,46 +2,10 @@ import '../src/stylesheets/style.scss'
 import '../src/stylesheets/buttons.scss'
 import React, { useState } from 'react';
 import playlists from './playlists.js';
+import Task from './components/task'
+import TaskForm from './components/taskform'
 
-
-
-function Task({ task, index, completeTask, removeTask }) {
-  return (
-    <div className="task"
-    style={{textDecoration: task.isCompleted ? "line-through": ""}}>
-      {task.text}
-      <div>
-        <button onClick={() => completeTask(index)}>Complete</button>\
-        <button onClick={() => removeTask(index)}>X</button>
-      </div>
-    </div>
-  )
-} 
-
-function TaskForm({ addTask }) {
-  const [value, setValue] = useState("")
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (!value) return;
-    addTask(value);
-    setValue("");
-  };
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        className="input"
-        value={value}
-        onChange={e => setValue(e.target.value)}/>
-    </form>
-  )
-}
-
-
-
-
-function App() {
+export default function App() {
   
   const [source, setSource] = useState("") //variable created to swap 'src' and change video displayed
 
@@ -50,8 +14,12 @@ function App() {
       text: "Rework Front-End",
       isCompleted: false
     },
+    {
+      text: "Add functionality for persistence/PWA/Local Storage",
+      isCompleted: false
+    },
   ])
-
+  
   const addTask = text => {
     const newTasks = [...tasks, { text }];
     setTasks(newTasks)
@@ -69,8 +37,6 @@ function App() {
     setTasks(newTasks);
   }
   
-  
-  
   //maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
   const listItems = playlists.map((playlist) => (
     <><button
@@ -84,11 +50,6 @@ function App() {
     <br/></>
   ));
   
-
- 
-
-
-
   return (
     <div className="App">
       <div class="columns">
@@ -130,4 +91,18 @@ function App() {
   );
 }
 
-export default App;
+
+
+
+
+
+
+
+  
+  
+
+ 
+
+
+
+
