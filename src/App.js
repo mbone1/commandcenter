@@ -5,12 +5,13 @@ import playlists from './playlists.js';
 
 
 
-function Task({ task, index, completeTask }) {
+function Task({ task, index, completeTask, removeTask }) {
   return (
     <div className="goal">
       {task.text}
       <div>
-        <button onClick={()=> completeTask(index)}>Complete</button>
+        <button onClick={() => completeTask(index)}>Complete</button>\
+        <button onClick={() => removeTask(index)}>X</button>
       </div>
     </div>
   )
@@ -60,6 +61,12 @@ function App() {
     newTasks[index].isCompleted = true;
     setTasks(newTasks)
   }
+
+  const removeTask = index => {
+    const newTasks = [...tasks];
+    newTasks.splice(index, 1);
+    setTasks(newTasks);
+  }
   
   
   
@@ -106,7 +113,13 @@ function App() {
         <div class="column is-one-fifth">
           Todays goal is{" "}
           {tasks.map((task, index) => (
-            <Task key={index} index={index} task={task} completeTask={completeTask} >{task}</Task>
+            <Task
+              key={index}
+              index={index}
+              task={task}
+              completeTask={completeTask}
+              removeTask={removeTask}  
+            >{task}</Task>
           ))}
           <TaskForm addTask={addTask} />
           
