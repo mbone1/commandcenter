@@ -7,7 +7,8 @@ import playlists from './playlists.js';
 
 function Task({ task, index, completeTask, removeTask }) {
   return (
-    <div className="goal">
+    <div className="task"
+    style={{textDecoration: task.isCompleted ? "line-through": ""}}>
       {task.text}
       <div>
         <button onClick={() => completeTask(index)}>Complete</button>\
