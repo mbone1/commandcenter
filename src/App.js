@@ -2,8 +2,8 @@ import '../src/stylesheets/style.scss'
 import '../src/stylesheets/buttons.scss'
 import React, { useState } from 'react';
 import playlists from './playlists.js';
-import Task from './components/task'
-import TaskForm from './components/taskform'
+import Task from './components/task/task'
+import TaskForm from './components/task/taskform'
 
 export default function App() {
 //variable created to swap 'src' and change video displayed
@@ -55,6 +55,11 @@ export default function App() {
 
 
 
+
+
+
+
+
   return (
     <div className="App">
       <div class="columns">
@@ -90,6 +95,10 @@ export default function App() {
             </Task>
           ))}
           <TaskForm addTask={addTask} />
+          <div>
+            
+            <h2>It is {new Date().toLocaleTimeString()}.</h2>
+          </div>
         </div>
       </div>
     </div>

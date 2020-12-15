@@ -36,6 +36,10 @@ let playlists = [
     SRC: "https://www.youtube.com/embed/kGu8xI21VTg",
   },
   {
+    Name: "Streets of Rage",
+    SRC: "https://www.youtube.com/embed/5Lp0GJNTRV0",
+  },
+  {
     Name: "SNES Volume I",
     SRC: "https://www.youtube.com/embed/SLgms78JVo0",
   },
