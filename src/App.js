@@ -6,50 +6,55 @@ import Task from './components/task'
 import TaskForm from './components/taskform'
 
 export default function App() {
-  
-  const [source, setSource] = useState("") //variable created to swap 'src' and change video displayed
-
+//variable created to swap 'src' and change video displayed
+  const [source, setSource] = useState("");
   const [tasks, setTasks] = useState([
     {
+      text: "Create Pomodoro Timer",
+      isCompleted: false,
+    },
+    {
       text: "Rework Front-End",
-      isCompleted: false
+      isCompleted: false,
     },
     {
       text: "Add functionality for persistence/PWA/Local Storage",
-      isCompleted: false
+      isCompleted: false,
     },
-  ])
-  
-  const addTask = text => {
+  ]);
+//ability to add a new task
+  const addTask = (text) => {
     const newTasks = [...tasks, { text }];
-    setTasks(newTasks)
-  }
-
-  const completeTask = index => {
+    setTasks(newTasks);
+  };
+//complete task, changes to true
+  const completeTask = (index) => {
     const newTasks = [...tasks];
     newTasks[index].isCompleted = true;
-    setTasks(newTasks)
-  }
-
-  const removeTask = index => {
+    setTasks(newTasks);
+  };
+//delete/remove task referenced by index
+  const removeTask = (index) => {
     const newTasks = [...tasks];
     newTasks.splice(index, 1);
     setTasks(newTasks);
-  }
-  
-  //maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
+  };
+//maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
   const listItems = playlists.map((playlist) => (
-    <><button
-      class="big-button"
-      key={playlist.Name}
-      content={playlist.Name}
-    onClick={() => setSource(playlist.SRC)}
-    >
-      {playlist.Name}
-    </button>
-    <br/></>
+    <>
+      <button
+        class="big-button"
+        key={playlist.Name}
+        content={playlist.Name}
+        onClick={() => setSource(playlist.SRC)}>
+        {playlist.Name}
+      </button>
+      <br />
+    </>
   ));
-  
+
+
+
   return (
     <div className="App">
       <div class="columns">
@@ -80,11 +85,11 @@ export default function App() {
               index={index}
               task={task}
               completeTask={completeTask}
-              removeTask={removeTask}  
-            >{task}</Task>
+              removeTask={removeTask}>
+              {task}
+            </Task>
           ))}
           <TaskForm addTask={addTask} />
-          
         </div>
       </div>
     </div>
