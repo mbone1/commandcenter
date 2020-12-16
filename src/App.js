@@ -5,6 +5,7 @@ import playlists from './playlists.js';
 import Task from './components/task/task'
 import TaskForm from './components/task/taskform'
 import Break from './components/pomodoro/break'
+import Session from './components/pomodoro/session'
 
 export default function App() {
 //variable created to swap 'src' and change video displayed
@@ -99,7 +100,8 @@ export default function App() {
           <div>
             <h2>It is {new Date().toLocaleTimeString()}.</h2>
 
-            <Break/>
+            <Break />
+            <Session/>
             
           </div>
 
