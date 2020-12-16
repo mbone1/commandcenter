@@ -17,14 +17,10 @@ export default function Session() {
   const sessionLengthInMinutes = moment.duration(sessionLength, "s").minutes();
   return (
     <div>
-      <span id="Session-label">Session</span>
-      <span id="Session-length">{sessionLengthInMinutes}</span>
-      <button id="Session-increment" onClick={incrementSessionLength}>
-        +
-      </button>
-      <button id="Session-decrement" onClick={decrementSessionLength}>
-        -
-      </button>
+      <span id="session-label">Session</span>
+      <span id="session-length">{sessionLengthInMinutes}</span>
+      <button id="session-increment" onClick={incrementSessionLength}>+</button>
+      <button id="session-decrement" onClick={decrementSessionLength}>-</button>
     </div>
   );
 }
