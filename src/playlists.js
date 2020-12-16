@@ -84,65 +84,14 @@ let playlists = [
     SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
   },
   {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+    Name: "J Dilla Instrumentals I",
+    SRC: "https://www.youtube.com/embed/XKB5h2tJQHQ",
   },
   {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
-  },
-  {
-    Name: "Bang on a Can",
-    SRC: "https://www.youtube.com/embed/tWXAP_L3pZg",
+    Name: "J Dilla Instrumentals II",
+    SRC: "https://www.youtube.com/embed/5cgLyNwSC4g",
   },
 ];
+  
 
 export default playlists;

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import playlists from './playlists.js';
 import Task from './components/task/task'
 import TaskForm from './components/task/taskform'
+import Break from './components/pomodoro/break'
 
 export default function App() {
 //variable created to swap 'src' and change video displayed
@@ -96,9 +97,12 @@ export default function App() {
           ))}
           <TaskForm addTask={addTask} />
           <div>
-            
             <h2>It is {new Date().toLocaleTimeString()}.</h2>
+
+            <Break/>
+            
           </div>
+
         </div>
       </div>
     </div>
