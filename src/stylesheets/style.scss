@@ -4,20 +4,25 @@
     --colorShadeC: rgb(171, 161, 161);
     --colorShadeD: rgb(201, 193, 193);
     --colorShadeE: rgb(227, 218, 218);
+    --background: rgb(20, 23, 28);
+    --textColor: rgb(255, 255, 255);
 }
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap');
+// font-family: 'Quantico', sans-serif;
 * {
     box-sizing: border-box;
 }
 
 html {
-    background-color: var(--colorShadeB);
+    background-color: var(--background);
+    color: var(--textColor)
 }
 
 .timer {
     color: white;
-    font-family: 'Monofett', cursive;
+    font-family: 'Quantico', cursive;
     font-size: 96px;
     max-height: 400px;
     max-width: 463px;
@@ -25,10 +30,11 @@ html {
 }
 
 .video {
-    border-radius: 10px;
-    border: 5px solid var(--colorShadeA);
+    // border-radius: 10px;
+    border: 5px solid var(--textColor);
     margin-left: 10px;
-    background-color: var(--colorShadeA);
+    padding: 10px;
+    background-color: var(--background);
 }
 
 .list {

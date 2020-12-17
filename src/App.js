@@ -6,7 +6,7 @@ import playlists from './playlists.js';
 // import TaskForm from './components/task/taskform'
 import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
-
+import Fela from './media/fela.jpg'
 
 export default function App() {
 //variable created to swap 'src' and change video displayed
@@ -17,7 +17,7 @@ export default function App() {
   const listItems = playlists.map((playlist) => (
     <>
       <button
-        class="big-button"
+        class="playlist-button"
         key={playlist.Name}
         content={playlist.Name}
         onClick={() => setSource(playlist.SRC)}>
@@ -38,7 +38,9 @@ export default function App() {
     <div className="App">
       <div class="columns">
         <div class="column is-one-fifth has-text-right">
-          <div class="list scroller has-text-right">{listItems}</div>
+          {/* <div class="list scroller has-text-right">{listItems}</div> */}
+          <div class="has-text-right">{listItems}</div>
+
         </div>
 
         <div class="column is-three-fifths">
@@ -55,19 +57,21 @@ export default function App() {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+          <img class="border" src={Fela} width="300" height="500"></img>
+         
+          {/* <iframe
+            src="https://www.google.com/webhp?igu=1"
+            width="840"
+            height="472.5"></iframe> */}
         </div>
         <div class="column is-one-fifth">
-  
-       
           <div>
             <h2>It is {new Date().toLocaleTimeString()}.</h2>
             <Pomodoro />
-            <Tasker/>
+            <Tasker />
             {/* <Break />
             <Session/> */}
-            
           </div>
-
         </div>
       </div>
     </div>
