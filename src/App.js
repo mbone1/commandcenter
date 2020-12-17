@@ -2,46 +2,17 @@ import '../src/stylesheets/style.scss'
 import '../src/stylesheets/buttons.scss'
 import React, { useState } from 'react';
 import playlists from './playlists.js';
-import Task from './components/task/task'
-import TaskForm from './components/task/taskform'
+// import Task from './components/task/task'
+// import TaskForm from './components/task/taskform'
 import Pomodoro from './components/pomodoro/pomodoro'
-// import Break from './components/pomodoro/break'
-// import Session from './components/pomodoro/session'
+import Tasker from './components/task/tasker'
+
 
 export default function App() {
 //variable created to swap 'src' and change video displayed
   const [source, setSource] = useState("");
-  const [tasks, setTasks] = useState([
-    {
-      text: "Create Pomodoro Timer",
-      isCompleted: false,
-    },
-    {
-      text: "Rework Front-End",
-      isCompleted: false,
-    },
-    {
-      text: "Add functionality for persistence/PWA/Local Storage",
-      isCompleted: false,
-    },
-  ]);
-//ability to add a new task
-  const addTask = (text) => {
-    const newTasks = [...tasks, { text }];
-    setTasks(newTasks);
-  };
-//complete task, changes to true
-  const completeTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks[index].isCompleted = true;
-    setTasks(newTasks);
-  };
-//delete/remove task referenced by index
-  const removeTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks.splice(index, 1);
-    setTasks(newTasks);
-  };
+ 
+
 //maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
   const listItems = playlists.map((playlist) => (
     <>
@@ -86,21 +57,12 @@ export default function App() {
             allowfullscreen></iframe>
         </div>
         <div class="column is-one-fifth">
-          Todays goal is{" "}
-          {tasks.map((task, index) => (
-            <Task
-              key={index}
-              index={index}
-              task={task}
-              completeTask={completeTask}
-              removeTask={removeTask}>
-              {task}
-            </Task>
-          ))}
-          <TaskForm addTask={addTask} />
+  
+       
           <div>
             <h2>It is {new Date().toLocaleTimeString()}.</h2>
-            <Pomodoro/>
+            <Pomodoro />
+            <Tasker/>
             {/* <Break />
             <Session/> */}
             
