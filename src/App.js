@@ -8,6 +8,7 @@ import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
 import Fela from './media/fela.jpg'
 
+
 export default function App() {
 //variable created to swap 'src' and change video displayed
   const [source, setSource] = useState("");
@@ -21,7 +22,7 @@ export default function App() {
         key={playlist.Name}
         content={playlist.Name}
         onClick={() => setSource(playlist.SRC)}>
-        {playlist.Name}
+        {playlist.Name.toUpperCase()}
       </button>
       <br />
     </>
@@ -36,10 +37,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <div class="columns">
-        <div class="column is-one-fifth has-text-right">
+      <div class="row">
+        <div class="col s2">
           {/* <div class="list scroller has-text-right">{listItems}</div> */}
-          <div class="has-text-right">{listItems}</div>
+          <div class="right-align border">{listItems}</div>
 
         </div>
 
