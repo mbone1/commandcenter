@@ -2,11 +2,12 @@
        :root {
           --background: rgb(20, 23, 28);
           --textColor: rgb(255, 255, 255);
+          --tileBackground: rgba(255, 255, 255, .01);
       }
       
       .playlist-button {
           color: var(--textColor);
-          background: rgba(255, 255, 255, .01);
+          background: var(--tileBackground);
           font-family: 'Quantico', sans-serif;
           font-size: 15px;
           border: 0;
@@ -17,13 +18,25 @@
           border: 1px solid var(--textColor);
           padding: 5px;
           margin-top: 10px;
+          margin-left: 10px;
           //   background-color: var(--textColor);
-          background: rgba(255, 255, 255, .01);
+          background: var(--tileBackground);
           text-align: right;
           max-width: 250px;
+          max-height: 350px;
+          overflow-y: auto;
       }
       
-      button:hover {
+      .border::-webkit-scrollbar {
+          width: 7px;
+      }
+      
+      .border::-webkit-scrollbar-thumb {
+          background-color: var(--textColor);
+          width: 7px;
+      }
+      
+      .playlist-button:hover {
           color: var(--background);
           background-color: var(--textColor);
       }
@@ -32,7 +45,7 @@
           background: rgba(255, 255, 255, .03)
       }
       
-      button:focus {
+      .playlist-button:focus {
           background-color: var(--textColor);
           color: var(--background);
           outline: none;
