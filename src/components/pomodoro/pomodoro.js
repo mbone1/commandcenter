@@ -5,6 +5,7 @@ import Timer from './timer'
 import Controls from './controls'
 import alarm from '../../media/sounds/notification.mp3'
 import "core-js/es/array";
+import '../../stylesheets/timer.scss'
 
 
 
@@ -45,14 +46,13 @@ export default function Pomodoro() {
       setTime(25 * 60 * 1000);
     };
     return (
-        <>
-            <h1>clock</h1>
+        <div className="timer">
             <Timer currentMode={[mode, setMode]} currentTime={[time, setTime]}/>
             <Controls activeStatus={[active, setActive]} handleReset={handleReset} />
             <TimeSet type={'Break'} value={[breakVal, setBreakVal]} />
             <TimeSet type={'Session'} value={[sessionVal, setSessionVal]} />
             <audio id='beep' src={alarm} ref={beep}/>
+            </div>
             
-            </>
 )
 }

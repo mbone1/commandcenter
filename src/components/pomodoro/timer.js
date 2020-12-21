@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import '../../stylesheets/timer.scss'
 
 export default function Timer({ currentMode, currentTime }) {
     const [mode] = currentMode;
@@ -7,12 +8,12 @@ export default function Timer({ currentMode, currentTime }) {
 
     return (
         <>
-            <span>
-                {mode === 'session' ? 'Session' : 'Break'}
-            </span>
-            <span>
+            <span className="clock">
             {moment(time).format('mm:ss')}
             </span>
+            <p className>
+              Current Mode:  {mode === 'session' ? 'Session' : 'Break'}
+            </p>
             </>
     )
 

@@ -5,9 +5,19 @@
 }
 
 .viewscreen {
-    // margin-bottom: 17px;
-    // padding-bottom: 100px;
     margin-top: 10px;
     border: 1px solid var(--textColor);
     background-color: var(--tileBackgroundHov);
+    width: 712px;
+    height: 400px;
+    animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

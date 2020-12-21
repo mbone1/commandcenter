@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../stylesheets/timer.scss'
 
 export default function TimeSet({ type, value }) {
     const [val, setVal] = value
@@ -19,13 +20,17 @@ export default function TimeSet({ type, value }) {
     }
     
     return (
-        <>
-            
-            <span>{type} Length</span> 
-            <button onClick={handleIncrement} />
-            <span>{val}</span>
-            <button onClick={handleDecrement} />
-            
-     </>       
-        )
+      <>
+        <p>{type} Length</p>
+        <button className="timer-button" onClick={handleIncrement}>
+          {" "}
+          &nbsp; + &nbsp;{" "}
+        </button>
+        <span>{val}</span>
+        <button className="timer-button" onClick={handleDecrement}>
+          {" "}
+          &nbsp; - &nbsp; {" "}
+        </button>
+      </>
+    );
     }

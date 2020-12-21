@@ -50,11 +50,9 @@ export default function App() {
           <iframe
             class="viewscreen"
             title={source}
-            width="712"
-            height="400"
             src={source}
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
           {/* <img class="border" src={Fela} width="300" height="500"></img> */}
          
@@ -63,14 +61,13 @@ export default function App() {
             width="840"
             height="472.5"></iframe> */}
         </div>
-        <div class="column is-one-fifth">
-          <div>
-            <h2>It is {new Date().toLocaleTimeString()}.</h2>
+        <div class="">
+          
+            {/* <h2>It is {new Date().toLocaleTimeString()}.</h2> */}
             <Pomodoro />
-            <Tasker />
-            {/* <Break />
-            <Session/> */}
-          </div>
+            {/* <Tasker /> */}
+           
+     
         </div>
       </div>
     </div>
