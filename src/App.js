@@ -38,28 +38,25 @@ export default function App() {
 
   return (
     <div className="App">
-      <div class="row">
-        <div class="col s2">
+      <div class="container">
+        
           {/* <div class="list scroller has-text-right">{listItems}</div> */}
           <div class="playlist">{listItems}</div>
 
-        </div>
+        
 
-        <div class="column is-three-fifths">
-          <div class="has-text-left">
-            <div class="timer"></div>
-          </div>
-          <div class="row">&nbsp;</div>
+        <div class="">
+         
           <iframe
             class="viewscreen"
             title={source}
-            width="840"
-            height="472.5"
+            width="712"
+            height="400"
             src={source}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-          <img class="border" src={Fela} width="300" height="500"></img>
+          {/* <img class="border" src={Fela} width="300" height="500"></img> */}
          
           {/* <iframe
             src="https://www.google.com/webhp?igu=1"
