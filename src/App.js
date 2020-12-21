@@ -1,5 +1,6 @@
 import '../src/stylesheets/style.scss'
-import '../src/stylesheets/buttons.scss'
+import '../src/stylesheets/playlist.scss'
+import '../src/stylesheets/viewscreen.scss'
 import React, { useState } from 'react';
 import playlists from './playlists.js';
 // import Task from './components/task/task'
@@ -40,7 +41,7 @@ export default function App() {
       <div class="row">
         <div class="col s2">
           {/* <div class="list scroller has-text-right">{listItems}</div> */}
-          <div class="right-align border">{listItems}</div>
+          <div class="playlist">{listItems}</div>
 
         </div>
 
@@ -50,7 +51,7 @@ export default function App() {
           </div>
           <div class="row">&nbsp;</div>
           <iframe
-            class="video"
+            class="viewscreen"
             title={source}
             width="840"
             height="472.5"

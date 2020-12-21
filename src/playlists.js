@@ -68,6 +68,10 @@ let playlists = [
     SRC: "https://www.youtube.com/embed/nda20uSjQUI",
   },
   {
+    Name: "Children of the Omnissiah",
+    SRC: "https://www.youtube.com/embed/C2Yx90pytqs",
+  },
+  {
     Name: "New Space Music",
     SRC: "https://www.youtube.com/embed/-dikWB6wm0A",
   },

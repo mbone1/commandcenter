@@ -37,13 +37,6 @@ html {
     background-color: var(--background);
 }
 
-.list {
-    overflow-y: auto;
-    max-height: 935px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
 .scroller::-webkit-scrollbar {
     width: 7px;
 }
