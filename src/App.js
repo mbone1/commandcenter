@@ -29,50 +29,53 @@ export default function App() {
     </>
   ));
 
-
-
-
-
-
-
-
   return (
-    <div className="App">
-      <div class="container">
-        
-          {/* <div class="list scroller has-text-right">{listItems}</div> */}
-          <div class="playlist">{listItems}</div>
+    <div class="container">
+        <div class="playlist">{listItems}</div>
+        <iframe
+          class="viewscreen"
+          title={source}
+          src={source}
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen/>
+          <Pomodoro />
+        <Tasker />
+  </div>
+);
+  
+}
 
+    
+    
+  
         
+            
+       
+     
+      
+       
 
-        <div class="">
+  
+  
+  {/* <img class="border" src={Fela} width="300" height="500"></img> */}
+  {/* <iframe
+    src="https://www.google.com/webhp?igu=1"
+    width="840"
+    height="472.5"></iframe> */}
+
+
+
+
          
-          <iframe
-            class="viewscreen"
-            title={source}
-            src={source}
-            frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-          {/* <img class="border" src={Fela} width="300" height="500"></img> */}
          
-          {/* <iframe
-            src="https://www.google.com/webhp?igu=1"
-            width="840"
-            height="472.5"></iframe> */}
-        </div>
-        <div class="">
           
-            {/* <h2>It is {new Date().toLocaleTimeString()}.</h2> */}
-            <Pomodoro />
-            {/* <Tasker /> */}
            
      
-        </div>
-      </div>
-    </div>
-  );
-}
+        
+
+        
+
 
 
 

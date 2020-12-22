@@ -23,11 +23,10 @@
           background: var(--tileBackground);
           text-align: right;
           width: 275px;
-          max-height: 400px;
+          height: 400px;
           overflow-y: auto;
       }
       
-      //animations
       .playlist::-webkit-scrollbar {
           width: 7px;
       }
@@ -37,6 +36,7 @@
           width: 7px;
       }
       
+      //animations
       .playlist-button:hover {
           color: var(--background);
           background-color: var(--textColor);

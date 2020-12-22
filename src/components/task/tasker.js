@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Task from './task'
 import TaskForm from './taskform'
+import '../../stylesheets/tasker.scss'
 
 
 export default function Tasker() {
@@ -38,7 +39,7 @@ export default function Tasker() {
     };
     
     return (
-      <>
+      <div className="tasks">
         {tasks.map((task, index) => (
           <Task
             key={index}
@@ -49,7 +50,7 @@ export default function Tasker() {
             {task}
           </Task>
         ))}
-        <TaskForm addTask={addTask} />
-      </>
+        <TaskForm addTask={addTask}/>
+      </div>
     );
 }

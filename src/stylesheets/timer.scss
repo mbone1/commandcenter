@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap');
 .timer {
     border: 1px solid var(--textColor);
+    background: var(--tileBackground);
     height: 400px;
     width: 250px;
     margin-top: 10px;
@@ -15,7 +16,7 @@
 
 .timer-button {
     color: var(--textColor);
-    background: var(--tileBackground);
+    background-color: var(--tileBackground);
     font-family: 'Quantico', sans-serif;
     font-size: 30px;
     border: 0;
@@ -25,4 +26,8 @@
 .timer-button:hover {
     color: var(--background);
     background-color: var(--textColor);
+}
+
+.timer:hover {
+    background: var(--tileBackgroundHov)
 }

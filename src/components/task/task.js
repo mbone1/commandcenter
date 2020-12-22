@@ -1,3 +1,5 @@
+import '../../stylesheets/tasker.scss'
+
 export default function Task({ task, index, completeTask, removeTask }) {
   return (
     <div
