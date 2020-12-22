@@ -46,7 +46,7 @@ export default function Pomodoro() {
       setTime(25 * 60 * 1000);
     };
     return (
-        <div className="timer">
+        <div className="timer row1">
             <Timer currentMode={[mode, setMode]} currentTime={[time, setTime]}/>
             <Controls activeStatus={[active, setActive]} handleReset={handleReset} />
             <TimeSet type={'Break'} value={[breakVal, setBreakVal]} />

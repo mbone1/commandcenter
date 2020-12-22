@@ -1,13 +1,39 @@
-    :root {
-       --background: rgb(20, 23, 28);
-       --textColor: rgb(255, 255, 255);
-       --tileBackground: rgba(255, 255, 255, .01);
-       --tileBackgroundHov: rgba(255, 255, 255, .03);
-   }
-   
-   .row1 {
-       margin-top: 10px;
-       border: 1px solid var(--textColor)
-   }
-   
-   //animations
+          :root {
+             --background: rgb(20, 23, 28);
+             --textColor: rgb(255, 255, 255);
+             --tileBackground: rgba(255, 255, 255, .01);
+             --tileBackgroundHov: rgba(255, 255, 255, .03);
+         }
+         
+         * {
+             box-sizing: border-box;
+         }
+         
+         html {
+             background-color: var(--background);
+             color: var(--textColor);
+             font-family: 'Quantico', sans-serif;
+         }
+         
+         .row1 {
+             margin-top: 10px;
+             border: 1px solid var(--textColor);
+             padding: 5px;
+             background: var(--tileBackground);
+         }
+         
+         //animations
+         .invert:hover {
+             color: var(--background);
+             background-color: var(--textColor);
+         }
+         
+         .invert:focus {
+             background-color: var(--textColor);
+             color: var(--background);
+             outline: none;
+         }
+         
+         .hov:hover {
+             background: var(--tileBackgroundHov)
+         }

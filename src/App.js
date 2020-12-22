@@ -1,4 +1,4 @@
-import '../src/stylesheets/style.scss'
+import '../src/stylesheets/common.scss'
 import '../src/stylesheets/playlist.scss'
 import '../src/stylesheets/viewscreen.scss'
 import React, { useState } from 'react';
@@ -19,7 +19,7 @@ export default function App() {
   const listItems = playlists.map((playlist) => (
     <>
       <button
-        class="playlist-button"
+        class="playlist-button invert"
         key={playlist.Name}
         content={playlist.Name}
         onClick={() => setSource(playlist.SRC)}>
@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <div class="container">
-        <div class="playlist">{listItems}</div>
+        <div class="playlist hov row1">{listItems}</div>
         <iframe
           class="viewscreen"
           title={source}

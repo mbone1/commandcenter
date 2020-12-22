@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap');
 .timer {
-    border: 1px solid var(--textColor);
-    background: var(--tileBackground);
-    height: 400px;
     width: 250px;
-    margin-top: 10px;
     font-family: 'Quantico', sans-serif;
-    padding: 10px;
     text-align: center;
 }
 
@@ -23,11 +18,10 @@
     padding: 0;
 }
 
-.timer-button:hover {
-    color: var(--background);
-    background-color: var(--textColor);
-}
-
-.timer:hover {
-    background: var(--tileBackgroundHov)
-}
+// .timer-button:hover {
+//     color: var(--background);
+//     background-color: var(--textColor);
+// }
+// .timer:hover {
+//     background: var(--tileBackgroundHov)
+// }
