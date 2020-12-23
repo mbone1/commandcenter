@@ -30,19 +30,27 @@ export default function App() {
   ));
 
   return (
-    <div class="container">
-        <div class="playlist hov row1">{listItems}</div>
+    <>
+      {" "}
+      <div class="container">
+        <div class="playlist hov row1 one">{listItems}</div>
         <iframe
-          class="viewscreen"
+          class="viewscreen two"
           title={source}
           src={source}
           frameborder="0"
           allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen/>
-          <Pomodoro />
+          allowfullscreen
+        />
+        <Pomodoro />
         <Tasker />
-  </div>
-);
+        {/* <div class="sidediv"></div> */}
+        <div class="nextdiv six"></div>
+        <div class="nextdiv eight"></div>
+      </div>
+     
+    </>
+  );
   
 }
 
