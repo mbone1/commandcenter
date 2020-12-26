@@ -10,8 +10,8 @@
 .playlist {
     margin-left: 10px;
     text-align: right;
-    width: 275px;
-    height: 400px;
+    // width: 275px;
+    max-height: 400px;
     overflow-y: auto;
 }
 

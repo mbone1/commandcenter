@@ -1,15 +1,11 @@
-.container {
-    display: inline-grid;
-    grid-column-gap: 10px;
-    grid-template-columns: auto auto auto auto auto;
-}
-
 .viewscreen {
     margin-top: 10px;
     border: 1px solid var(--textColor);
     background-color: var(--tileBackgroundHov);
-    width: 712px;
-    height: 400px;
+    // width: 712px;
+    width: auto;
+    // height: auto;
+    // height: 400px;
     animation: fadeIn ease 2s;
 }
 

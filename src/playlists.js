@@ -95,6 +95,10 @@ let playlists = [
     Name: "J Dilla Instrumentals II",
     SRC: "https://www.youtube.com/embed/5cgLyNwSC4g",
   },
+  {
+    Name: "An Evening with Olafur Arnalds and Nils Frahm",
+    SRC: "https://www.youtube.com/embed/njcGRTEaxKg",
+  },
 ];
   
 

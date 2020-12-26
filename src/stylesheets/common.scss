@@ -17,45 +17,40 @@ html {
 
 .container {
     display: grid;
-    grid-column-gap: 10px;
+    grid-column-gap: 5px;
     // grid-template-columns: auto auto auto auto auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(10, 10%);
     grid-auto-rows: minmax(100px, auto)
 }
 
 .one {
-    grid-column: 1;
+    grid-column: span 2;
     grid-row: 1;
 }
 
 .two {
-    grid-column: 2;
+    grid-column: span 5;
     grid-row: 1;
 }
 
 .three {
-    grid-column: 3;
+    grid-column: span 3;
     grid-row: 1;
 }
 
 .four {
-    grid-column: 4;
+    grid-column: span 1;
     grid-row: 1;
 }
 
 .five {
-    grid-column: 5;
-    grid-row: 3 / 3;
+    grid-column: span 1;
+    grid-row: 1 / -1;
 }
 
 .six {
     grid-column: 1;
-    grid-row: 2;
-}
-
-.eight {
-    grid-column: 3;
-    grid-row: 2;
+    grid-row: 2 / 5;
 }
 
 .row1 {
@@ -63,6 +58,7 @@ html {
     border: 1px solid var(--textColor);
     padding: 5px;
     background: var(--tileBackground);
+    height: 400px;
 }
 
 //animations
@@ -91,10 +87,11 @@ html {
 }
 
 .nextdiv {
-    width: 300px;
-    height: 400px;
+    width: auto;
+    height: auto;
     border: 1px solid var(--textColor);
     padding: 5px;
     background: var(--tileBackground);
     margin-top: 10px;
+    margin-left: 10px;
 }

@@ -39,7 +39,7 @@ export default function Tasker() {
     };
     
     return (
-      <div className="tasks">
+      <div className="tasks four">
         {tasks.map((task, index) => (
           <Task
             key={index}

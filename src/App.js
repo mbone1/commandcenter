@@ -35,7 +35,7 @@ export default function App() {
       <div class="container">
         <div class="playlist hov row1 one">{listItems}</div>
         <iframe
-          class="viewscreen two"
+          class="viewscreen two row1"
           title={source}
           src={source}
           frameborder="0"
@@ -45,8 +45,9 @@ export default function App() {
         <Pomodoro />
         <Tasker />
         {/* <div class="sidediv"></div> */}
-        <div class="nextdiv six"></div>
-        <div class="nextdiv eight"></div>
+        <div class="five"></div>
+        {/* <div class="nextdiv six"><img src={Fela} height="400" width="260"/></div> */}
+        
       </div>
      
     </>
