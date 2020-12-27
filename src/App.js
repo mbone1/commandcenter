@@ -2,10 +2,8 @@ import '../src/stylesheets/common.scss'
 import '../src/stylesheets/playlist.scss'
 import '../src/stylesheets/viewscreen.scss'
 import React, { useState } from 'react';
-import playlists from './playlists.js';
 import Jukebox from './components/playlist/jukebox'
-// import Task from './components/task/task'
-// import TaskForm from './components/task/taskform'
+import Links from './components/links/links'
 import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
 import Fela from './media/fela.jpg'
@@ -23,7 +21,7 @@ export default function App() {
         <div className="six borders ai hov">six</div>
         <div className="seven borders hov">seven</div>
         <div className="eight borders hov">eight</div>
-        <div className="nine borders hov">nine</div>
+        <Links/>
         <div className="ten borders hov">ten</div>
         <div className="eleven borders hov">eleven</div>
         <div className="twelve borders hov">twelve</div>
