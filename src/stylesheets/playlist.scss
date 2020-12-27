@@ -5,6 +5,11 @@
     font-size: 12px;
     border: 0;
     padding: 0;
+    // animation: scroller 3s linear ease-in-out;
+}
+
+.playlist-button:hover {
+    animation: scroller 3s linear infinite;
 }
 
 .playlist {
@@ -13,8 +18,6 @@
     max-width: 275px;
     max-height: 400px;
     overflow-y: auto;
-    // overflow-x: visible;
-    text-overflow: "dasidjfaosiemnfienf";
     overflow-x: hidden;
     white-space: nowrap;
 }
@@ -27,4 +30,22 @@
 .playlist::-webkit-scrollbar-thumb {
     background-color: var(--textColor);
     width: 7px;
+}
+
+@keyframes scroller {
+    0% {
+        transform: translateX(0%);
+    }
+    /* ‘pauses’ the scroller at the start for 20% of the time, adjust to edit timing */
+    20% {
+        transform: translateX(0%);
+    }
+    /* ‘pauses’ the scroller at the end for 20% of the time */
+    80% {
+        /* Translate will use the width of the element so 100% scrolls it’s full length. add the width of the marquee to stop smaller items scrolling */
+        transform: translateX(calc(-100% + 100px));
+    }
+    100% {
+        transform: translateX(calc(-100% + 100px));
+    }
 }
