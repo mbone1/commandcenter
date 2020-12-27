@@ -1,12 +1,14 @@
 import '../src/stylesheets/common.scss'
 import '../src/stylesheets/playlist.scss'
 import '../src/stylesheets/viewscreen.scss'
-import React, { useState } from 'react';
+import '../src/stylesheets/grid.scss'
+import React from 'react';
 import Jukebox from './components/playlist/jukebox'
 import Links from './components/links/links'
 import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
 import Fela from './media/fela.jpg'
+import Bot from './components/bot/bot';
 
 
 export default function App() {
@@ -14,18 +16,17 @@ export default function App() {
     <>
       {" "}
       <div class="container">
-        <Jukebox/>
+        <Jukebox />
         <Pomodoro />
         <Tasker />
-        <div className="five notes borders hov">five</div>
-        <div className="six borders ai hov">six</div>
-        <div className="seven borders hov">seven</div>
-        <div className="eight borders hov">eight</div>
-        <Links/>
-        <div className="ten borders hov">ten</div>
-        <div className="eleven borders hov">eleven</div>
-        <div className="twelve borders hov">twelve</div>
-    
+        <div className="five notes borders hov">five - NOT SURE</div>
+        <Bot />
+        <div className="seven borders hov">seven - ART PANEL</div>
+        <div className="eight borders hov">eight - NOT SURE</div>
+        <Links />
+        <div className="ten borders hov">ten - NOT SURE</div>
+        <div className="eleven borders hov">eleven - NOT SURE</div>
+        <div className="twelve borders hov">twelve - NOT SURE</div>
       </div>
     </>
   );

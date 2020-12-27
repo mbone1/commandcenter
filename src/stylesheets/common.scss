@@ -23,6 +23,13 @@ html {
     grid-auto-rows: minmax(133px, auto)
 }
 
+//Temporary Test Classes
+.kubot {
+    border: 1px solid var(--textColor);
+    margin: 20px;
+    margin-left: 0px
+}
+
 .borders {
     border: 1px solid var(--textColor);
     margin-top: 5px;
@@ -33,67 +40,6 @@ html {
 }
 
 .ai {
-    margin-left: 10px;
-}
-
-.one {
-    grid-column: span 1;
-    grid-row: 1;
-}
-
-.two {
-    grid-column: span 4;
-    grid-row: 1;
-}
-
-.three {
-    grid-column: span 1;
-    grid-row: 1;
-}
-
-.four {
-    grid-column: span 2;
-    grid-row: 1;
-}
-
-.five {
-    grid-column: span 2;
-    grid-row: 1 / 7;
-}
-
-.six {
-    grid-column: span 4;
-    grid-row: span 3;
-}
-
-.seven {
-    grid-column: span 2;
-    grid-row: span 3;
-}
-
-.eight {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
-.nine {
-    grid-column: span 1;
-    grid-row: span 2;
-}
-
-.ten {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
-.eleven {
-    grid-column: span 2;
-    grid-row: span 1;
-}
-
-.twelve {
-    grid-column: span 8;
-    grid-row: span 2;
     margin-left: 10px;
 }
 

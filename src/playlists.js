@@ -99,6 +99,10 @@ let playlists = [
     Name: "An Evening with Olafur Arnalds and Nils Frahm",
     SRC: "https://www.youtube.com/embed/njcGRTEaxKg",
   },
+  {
+    Name: "Happy Ending",
+    SRC: "https://www.youtube.com/embed/HCcvQ-QeJUs",
+  },
 ];
   
 

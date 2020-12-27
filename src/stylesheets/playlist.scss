@@ -7,9 +7,14 @@
     padding: 0;
 }
 
-// .playlist-button:hover {
-//     animation: scroller 3s linear infinite;
-// }
+.playlist-button:hover {
+    animation: scroller 3s linear infinite;
+}
+
+.playlist-button:focus {
+    animation: scroller 3s linear infinite;
+}
+
 .playlist {
     margin-left: 10px;
     text-align: right;
