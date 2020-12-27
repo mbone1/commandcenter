@@ -2,12 +2,12 @@ import '../src/stylesheets/common.scss'
 import '../src/stylesheets/playlist.scss'
 import '../src/stylesheets/viewscreen.scss'
 import '../src/stylesheets/grid.scss'
+import '../src/stylesheets/bot.scss'
 import React from 'react';
 import Jukebox from './components/playlist/jukebox'
 import Links from './components/links/links'
 import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
-import Fela from './media/fela.jpg'
 import Bot from './components/bot/bot';
 
 
