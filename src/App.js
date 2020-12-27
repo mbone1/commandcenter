@@ -22,7 +22,7 @@ export default function App() {
         <div className="five notes borders hov">five - NOT SURE</div>
         <Bot />
         <div className="seven borders hov">seven - ART PANEL</div>
-        <div className="eight borders hov">eight - NOT SURE</div>
+        <div className="eight borders hov">eight - CLOCK</div>
         <Links />
         <div className="ten borders hov">ten - NOT SURE</div>
         <div className="eleven borders hov">eleven - NOT SURE</div>
