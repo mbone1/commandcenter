@@ -2,7 +2,7 @@
     color: var(--textColor);
     background: var(--tileBackground);
     font-family: 'Quantico', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     border: 0;
     padding: 0;
 }
@@ -10,9 +10,13 @@
 .playlist {
     margin-left: 10px;
     text-align: right;
-    // width: 275px;
+    max-width: 275px;
     max-height: 400px;
     overflow-y: auto;
+    // overflow-x: visible;
+    text-overflow: "dasidjfaosiemnfienf";
+    overflow-x: hidden;
+    white-space: nowrap;
 }
 
 //scrollbar styling

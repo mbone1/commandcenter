@@ -1,12 +1,18 @@
-.viewscreen {
+.viewscreenContainer {
+    // width: auto;
+    // height: auto;
     margin-top: 10px;
     border: 1px solid var(--textColor);
     background-color: var(--tileBackgroundHov);
-    // width: 712px;
-    width: auto;
-    // height: auto;
-    // height: 400px;
     animation: fadeIn ease 2s;
+    text-align: center;
+}
+
+.viewscreen {
+    width: 800px;
+    height: 380px;
+    border: 0;
+    // margin-left: 5px;
 }
 
 @keyframes fadeIn {

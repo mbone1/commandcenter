@@ -19,22 +19,22 @@ html {
     display: grid;
     grid-column-gap: 5px;
     // grid-template-columns: auto auto auto auto auto;
-    grid-template-columns: repeat(10, 10%);
+    grid-template-columns: repeat(6, 200px);
     grid-auto-rows: minmax(100px, auto)
 }
 
 .one {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: 1;
 }
 
 .two {
-    grid-column: span 5;
+    grid-column: span 4;
     grid-row: 1;
 }
 
 .three {
-    grid-column: span 3;
+    grid-column: span 1;
     grid-row: 1;
 }
 

@@ -34,22 +34,22 @@ export default function App() {
       {" "}
       <div class="container">
         <div class="playlist hov row1 one">{listItems}</div>
-        <iframe
-          class="viewscreen two row1"
-          title={source}
-          src={source}
-          frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        />
+        <div className="viewscreenContainer two">
+          <iframe
+            class="viewscreen row1"
+            title={source}
+            src={source}
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
         <Pomodoro />
         <Tasker />
         {/* <div class="sidediv"></div> */}
         <div class="five"></div>
         {/* <div class="nextdiv six"><img src={Fela} height="400" width="260"/></div> */}
-        
       </div>
-     
     </>
   );
   
