@@ -34,7 +34,7 @@ export default function App() {
       {" "}
       <div class="container">
         <div class="playlist hov row1 one">{listItems}</div>
-        <div className="viewscreenContainer two">
+        <div className="viewscreenContainer two hov">
           <iframe
             class="viewscreen row1"
             title={source}
@@ -46,9 +46,15 @@ export default function App() {
         </div>
         <Pomodoro />
         <Tasker />
-        {/* <div class="sidediv"></div> */}
-        <div class="five"></div>
-        {/* <div class="nextdiv six"><img src={Fela} height="400" width="260"/></div> */}
+        <div className="five notes borders hov">five</div>
+        <div className="six borders ai hov">six</div>
+        <div className="seven borders hov">seven</div>
+        <div className="eight borders hov">eight</div>
+        <div className="nine borders hov">nine</div>
+        <div className="ten borders hov">ten</div>
+        <div className="eleven borders hov">eleven</div>
+        <div className="twelve borders hov">twelve</div>
+    
       </div>
     </>
   );

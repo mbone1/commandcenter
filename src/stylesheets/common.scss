@@ -19,8 +19,21 @@ html {
     display: grid;
     grid-column-gap: 5px;
     // grid-template-columns: auto auto auto auto auto;
-    grid-template-columns: repeat(6, 200px);
-    grid-auto-rows: minmax(100px, auto)
+    grid-template-columns: repeat(8, 200px);
+    grid-auto-rows: minmax(133px, auto)
+}
+
+.borders {
+    border: 1px solid var(--textColor);
+    margin-top: 5px;
+}
+
+.notes {
+    margin-top: 10px;
+}
+
+.ai {
+    margin-left: 10px;
 }
 
 .one {
@@ -39,18 +52,49 @@ html {
 }
 
 .four {
-    grid-column: span 1;
+    grid-column: span 2;
     grid-row: 1;
 }
 
 .five {
-    grid-column: span 1;
-    grid-row: 1 / -1;
+    grid-column: span 2;
+    grid-row: 1 / 7;
 }
 
 .six {
-    grid-column: 1;
-    grid-row: 2 / 5;
+    grid-column: span 4;
+    grid-row: span 3;
+}
+
+.seven {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.eight {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.nine {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.ten {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.eleven {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.twelve {
+    grid-column: span 8;
+    grid-row: span 2;
+    margin-left: 10px;
 }
 
 .row1 {
@@ -75,23 +119,4 @@ html {
 
 .hov:hover {
     background: var(--tileBackgroundHov);
-}
-
-.sidediv {
-    width: 370px;
-    height: 1055px;
-    border: 1px solid var(--textColor);
-    padding: 5px;
-    background: var(--tileBackground);
-    margin-top: 10px;
-}
-
-.nextdiv {
-    width: auto;
-    height: auto;
-    border: 1px solid var(--textColor);
-    padding: 5px;
-    background: var(--tileBackground);
-    margin-top: 10px;
-    margin-left: 10px;
 }
