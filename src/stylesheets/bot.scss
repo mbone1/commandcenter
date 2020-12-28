@@ -32,3 +32,12 @@
     margin: 15px;
     margin-left: 39px;
 }
+
+.namePlate {
+    border: 1px solid var(--textColor);
+    position: absolute;
+    background-color: var(--background);
+    font-family: 'Quantico', sans-serif;
+    margin-top: 320px;
+    margin-left: 170px;
+}

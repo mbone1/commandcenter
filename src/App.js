@@ -24,8 +24,8 @@ export default function App() {
         <div className="seven borders hov">seven - ART PANEL</div>
         <div className="eight borders hov">eight - CLOCK</div>
         <Links />
-        <div className="ten borders hov">ten - NOT SURE</div>
-        <div className="eleven borders hov">eleven - NOT SURE</div>
+        <div className="ten borders hov">ten - CONTROL PANEL</div>
+        <div className="eleven borders hov">eleven - CONTROL PANEL</div>
         <div className="twelve borders hov">twelve - NOT SURE</div>
       </div>
     </>
