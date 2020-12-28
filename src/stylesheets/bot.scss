@@ -1,6 +1,5 @@
 .sideBtn {
     transform: rotate(90deg);
-    // float: left;
     color: var(--textColor);
     background-color: var(--background);
     border: 1px solid var(--textColor);
@@ -40,4 +39,28 @@
     font-family: 'Quantico', sans-serif;
     margin-top: 320px;
     margin-left: 170px;
+}
+
+.author {
+    font-size: 10px;
+    width: 100px;
+    margin-left: 150px
+}
+
+.textBox {
+    height: 300px;
+    width: 390px;
+    float: right;
+    position: absolute;
+    margin-top: -350px;
+    margin-left: 400px;
+    font-family: 'Quantico', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 100px;
+    // padding-bottom: 40px
+}
+
+.text {
+    margin-top: 2px
 }

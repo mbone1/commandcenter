@@ -2,28 +2,21 @@
             font-family: 'Quantico', sans-serif;
             border: 1px solid var(--textColor);
             height: 400px;
-            // width: 250px;
             margin-top: 10px;
             padding: 5px;
             text-transform: uppercase;
-            // position: inline-grid;
         }
         
         .task {
             padding: 5px;
         }
         
-        .focus {
-            opacity: .5;
-            // background: var(--textColor);
-        }
-        
         .bordersNM {
             border: 1px solid var(--textColor);
         }
         
-        .bordersNMG {
-            border: 1px solid var(--focusedTask);
+        .bordersNMF {
+            border: 5px solid var(--textColor);
         }
         
         .taskButton {

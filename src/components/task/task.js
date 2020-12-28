@@ -3,7 +3,7 @@ import '../../stylesheets/tasker.scss'
 export default function Task({ task, index, completeTask, uncompleteTask, removeTask, focusTask, unFocusTask }) {
   return (
     <div
-      className={task.isFocused ? "task bordersNMG" : "task bordersNM"}
+      className={task.isFocused ? "task bordersNMF" : "task bordersNM"}
       style={{ textDecoration: task.isCompleted ? "line-through" : "" }}>
       {task.text}
       <div>
