@@ -9,14 +9,17 @@ export default function Tasker() {
     {
       text: "Create Pomodoro Timer",
       isCompleted: true,
+      isFocused: false,
     },
     {
       text: "Rework Front-End",
       isCompleted: false,
+      isFocused: false,
     },
     {
       text: "Add functionality for persistence/PWA/Local Storage",
       isCompleted: false,
+      isFocused: false,
     },
   ]);
 
@@ -31,10 +34,22 @@ export default function Tasker() {
     newTasks[index].isCompleted = true;
     setTasks(newTasks);
   };
-  //uncomeplete task, changes to false
+  //uncomplete task, changes to false
   const uncompleteTask = (index) => {
     const newTasks = [...tasks];
     newTasks[index].isCompleted = false;
+    setTasks(newTasks);
+  };
+  //add focus to task, will be used to add class highlight task
+  const focusTask = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].isFocused = true;
+    setTasks(newTasks);
+  };
+  //remove focus from task
+  const unFocusTask = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].isFocused = false;
     setTasks(newTasks);
   };
   //delete/remove task referenced by index
@@ -53,7 +68,9 @@ export default function Tasker() {
             task={task}
             completeTask={completeTask}
             uncompleteTask={uncompleteTask}
-            removeTask={removeTask}>
+            removeTask={removeTask}
+            focusTask={focusTask}
+            unFocusTask={unFocusTask}>
             {task}
           </Task>
         ))}

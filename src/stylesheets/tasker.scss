@@ -9,11 +9,29 @@
             // position: inline-grid;
         }
         
+        .task {
+            padding: 5px;
+        }
+        
+        .focus {
+            opacity: .5;
+            // background: var(--textColor);
+        }
+        
+        .bordersNM {
+            border: 1px solid var(--textColor);
+        }
+        
+        .bordersNMG {
+            border: 1px solid var(--focusedTask);
+        }
+        
         .taskButton {
             color: var(--textColor);
             background: var(--tileBackground);
             font-family: 'Quantico', sans-serif;
-            font-size: 12px;
+            font-size: 8px;
             border: 0;
+            text-transform: uppercase;
             // position: grid;
         }
