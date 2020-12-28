@@ -14,7 +14,7 @@ export default function Links() {
                 class="link"
                 key={link.Name}
                 content={link.Name}
-                src={link.SRC}> {link.Name}</a>
+                href={link.SRC}> {link.Name}</a>
             </>
     ))
 

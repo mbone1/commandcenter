@@ -31,6 +31,12 @@ export default function Tasker() {
     newTasks[index].isCompleted = true;
     setTasks(newTasks);
   };
+  //uncomeplete task, changes to false
+  const uncompleteTask = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].isCompleted = false;
+    setTasks(newTasks);
+  };
   //delete/remove task referenced by index
   const removeTask = (index) => {
     const newTasks = [...tasks];
@@ -39,18 +45,21 @@ export default function Tasker() {
     };
     
     return (
-      <div className="tasks four">
+      <div className="tasks four hov">
         {tasks.map((task, index) => (
           <Task
             key={index}
             index={index}
             task={task}
             completeTask={completeTask}
+            uncompleteTask={uncompleteTask}
             removeTask={removeTask}>
             {task}
           </Task>
         ))}
-        <TaskForm addTask={addTask}/>
+        
+          <TaskForm addTask={addTask} />
+    
       </div>
     );
 }
