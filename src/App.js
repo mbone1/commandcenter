@@ -22,7 +22,7 @@ export default function App() {
         <Jukebox />
         <Pomodoro />
         <Tasker />
-        <div className="five notes borders hov">five - NOT SURE</div>
+        <div className="five notes borders hov">five - NOT SURE  NOTE MAKER</div>
         <Bot />
         <div className="seven borders hov">seven - ART PANEL</div>
         <Clock />
@@ -43,18 +43,7 @@ export default function App() {
   
         
             
-       
-     
       
-       
-
-  
-  
-  {/* <img class="border" src={Fela} width="300" height="500"></img> */}
-  {/* <iframe
-    src="https://www.google.com/webhp?igu=1"
-    width="840"
-    height="472.5"></iframe> */}
 
 
 

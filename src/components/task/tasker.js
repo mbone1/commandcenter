@@ -7,12 +7,12 @@ import '../../stylesheets/tasker.scss'
 export default function Tasker() {
   const [tasks, setTasks] = useState([
     {
-      text: "Create Pomodoro Timer",
-      isCompleted: true,
+      text: "Aspire to the purity of the blessed machine",
+      isCompleted: false,
       isFocused: false,
     },
     {
-      text: "Rework Front-End",
+      text: "Seek the suredness of Steel",
       isCompleted: false,
       isFocused: false,
     },
