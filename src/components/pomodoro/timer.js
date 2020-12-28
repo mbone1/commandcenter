@@ -8,7 +8,7 @@ export default function Timer({ currentMode, currentTime }) {
 
     return (
         <>
-            <span className="clock">
+            <span className="timerDisplay">
             {moment(time).format('mm:ss')}
             </span>
             <p className>

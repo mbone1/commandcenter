@@ -9,6 +9,7 @@ import Links from './components/links/links'
 import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
 import Bot from './components/bot/bot';
+import Clock from './components/clock/clock'
 
 
 export default function App() {
@@ -22,7 +23,7 @@ export default function App() {
         <div className="five notes borders hov">five - NOT SURE</div>
         <Bot />
         <div className="seven borders hov">seven - ART PANEL</div>
-        <div className="eight borders hov">eight - CLOCK</div>
+        <Clock />
         <Links />
         <div className="ten borders hov">ten - CONTROL PANEL</div>
         <div className="eleven borders hov">eleven - CONTROL PANEL</div>
