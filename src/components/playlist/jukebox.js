@@ -23,7 +23,11 @@ export default function Jukebox() {
     return (<>
            <div class="playlist hov row1 one">{listItems}</div>
         <div className="viewscreenContainer two hov">
-          <iframe
+        <iframe
+            modestbranding="1"
+            loop="1"
+            color="white"
+            fs="0"
             class="viewscreen row1"
             title={source}
             src={source}

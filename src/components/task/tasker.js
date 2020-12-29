@@ -12,7 +12,7 @@ export default function Tasker() {
       isFocused: false,
     },
     {
-      text: "Seek the suredness of Steel",
+      text: "Crave for strength and the certainity of steel",
       isCompleted: false,
       isFocused: false,
     },
