@@ -52,6 +52,10 @@ let playlists = [
     SRC: "https://www.youtube.com/embed/j0-9udYcxOI?color=white;",
   },
   {
+    Name: "Silent Hill 2 waveOST",
+    SRC: "https://www.youtube.com/embed/0WtcnkdTrlw?color=white;",
+  },
+  {
     Name: "Blade Runner 2049",
     SRC: "https://www.youtube.com/embed/zyLhNzlDG0Y?color=white;",
   },

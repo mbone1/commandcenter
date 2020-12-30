@@ -3,7 +3,7 @@
     --textColor: rgb(255, 255, 255);
     --tileBackground: rgba(255, 255, 255, 0.01);
     --tileBackgroundHov: rgba(255, 255, 255, 0.03);
-    --focusedTask: rgb(30, 255, 105);
+    --violet: #ff9fff;
 }
 
 * {
@@ -31,17 +31,17 @@ html {
 }
 
 .borders {
-    border: 1px solid var(--textColor);
+    border: 1px solid var(--violet);
     margin-top: 5px;
+    color: var(--violet);
 }
 
 .notes {
     margin-top: 10px;
 }
 
-.row1 {
+.toprow {
     margin-top: 10px;
-    border: 1px solid var(--textColor);
     padding: 5px;
     background: var(--tileBackground);
     height: 400px;

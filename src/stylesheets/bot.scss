@@ -1,8 +1,6 @@
 .sideBtn {
     transform: rotate(90deg);
-    color: var(--textColor);
     background-color: var(--background);
-    border: 1px solid var(--textColor);
     text-transform: uppercase;
     font-family: 'Quantico', sans-serif;
     font-size: 15px;
@@ -27,13 +25,11 @@
 }
 
 .kubot {
-    border: 1px solid var(--textColor);
     margin: 15px;
     margin-left: 39px;
 }
 
 .namePlate {
-    border: 1px solid var(--textColor);
     position: absolute;
     background-color: var(--background);
     font-family: 'Quantico', sans-serif;
@@ -58,7 +54,6 @@
     text-transform: uppercase;
     text-align: center;
     padding-top: 100px;
-    // padding-bottom: 40px
 }
 
 .text {

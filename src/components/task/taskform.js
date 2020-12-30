@@ -14,7 +14,7 @@ export default function TaskForm({ addTask }) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        className="input"
+        className="input borders"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />

@@ -60,7 +60,7 @@ export default function Tasker() {
     };
     
     return (
-      <div className="tasks four hov">
+      <div className="tasks four hov borders">
         {tasks.map((task, index) => (
           <Task
             key={index}
