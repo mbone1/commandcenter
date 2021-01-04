@@ -1,4 +1,4 @@
-export function ColorControls() {
+export default function ColorControls() {
     return (<div className="ten borders hov holder">
         <button className="cButton orange"></button>
         <button className="cButton green"></button>

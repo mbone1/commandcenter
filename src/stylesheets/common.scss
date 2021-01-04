@@ -1,6 +1,7 @@
 :root {
     --background: rgb(20, 23, 28);
     --textColor: rgb(255, 255, 255);
+    --white: rgb(255, 255, 255);
     --tileBackground: rgba(255, 255, 255, 0.01);
     --tileBackgroundHov: rgba(255, 255, 255, 0.03);
     --violet: #ff9fff;
@@ -31,9 +32,9 @@ html {
 }
 
 .borders {
-    border: 1px solid var(--violet);
+    border: 1px solid var(--white);
     margin-top: 5px;
-    color: var(--violet);
+    color: var(--white);
 }
 
 .notes {

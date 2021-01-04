@@ -12,6 +12,7 @@ import Tasker from './components/task/tasker'
 import Bot from './components/bot/bot';
 import Clock from './components/clock/clock'
 import ColorControls from './components/controlpanel/colorcontrols'
+import Mori from './components/memento/mori'
 
 
 export default function App() {
@@ -22,7 +23,7 @@ export default function App() {
         <Jukebox />
         <Pomodoro />
         <Tasker />
-        <div className="five notes borders hov">five - NOT SURE  NOTE MAKER</div>
+        <div className="five notes borders hov"><Mori /></div>
         <Bot />
         <div className="seven borders hov">seven - ART PANEL</div>
         <Clock />
