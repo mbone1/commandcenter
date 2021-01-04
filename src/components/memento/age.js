@@ -1,3 +1,5 @@
+import one from '../../media/123.png'
+
 export default function Age() {
   var today = new Date();
   var birthDate = new Date("1990-7-15");
@@ -9,7 +11,9 @@ export default function Age() {
     var m = today.getMonth() - birthDate.getMonth();
     var l = today.getMinutes() - birthDate.getMinutes()
     var n = birthDate.getMinutes()
-    console.log(n)
+    let hello2 = 1023
+    let hello = (Math.floor(age/100)).toString()
+    console.log(age.toLocaleString)
   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
     age--;
     }
@@ -25,6 +29,7 @@ export default function Age() {
         
         <p>{age} days</p>
         <p>{ageInHours} Hours</p>
+        <img className="borders" width="10px" src={one}height={hello}/>
         
         
     
