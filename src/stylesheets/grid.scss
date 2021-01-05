@@ -1,3 +1,13 @@
+//GRID SETUP
+.container {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: repeat(8, 200px);
+    grid-auto-rows: minmax(133px, auto);
+    font-family: "Quantico", sans-serif;
+    text-transform: uppercase;
+}
+
 //GRIDS
 .one {
     grid-column: span 1;

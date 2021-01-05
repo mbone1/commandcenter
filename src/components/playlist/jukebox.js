@@ -22,7 +22,7 @@ export default function Jukebox() {
     
     return (<>
            <div class="playlist hov borders toprow one">{listItems}</div>
-        <div className="viewscreenContainer toprow two hov">
+        <div className="viewscreenContainer toprow borders two hov">
         <iframe
             modestbranding="1"
             loop="1"

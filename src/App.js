@@ -25,7 +25,7 @@ export default function App() {
         <Jukebox />
         <Pomodoro />
         <Tasker />
-        <div className="five notes borders hov"><Mori /> <Age/></div>
+        <div className="five toprow borders hov"><Mori /> <Age/></div>
         <Bot />
         <div className="seven borders hov">seven - ART PANEL</div>
         <Clock />

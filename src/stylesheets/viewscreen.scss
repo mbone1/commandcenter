@@ -1,8 +1,5 @@
 .viewscreenContainer {
-    // width: auto;
-    // height: auto;
     margin-top: 10px;
-    border: 1px solid var(--textColor);
     background-color: var(--tileBackgroundHov);
     animation: fadeIn ease 2s;
     text-align: center;
@@ -12,7 +9,6 @@
     width: 800px;
     height: 380px;
     border: 0;
-    // margin-left: 5px;
 }
 
 @keyframes fadeIn {

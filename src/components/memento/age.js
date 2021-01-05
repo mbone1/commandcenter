@@ -13,6 +13,7 @@ export default function Age() {
     var n = birthDate.getMinutes()
     let hello2 = 1023
     let hello = (Math.floor(age/100)).toString()
+    let hello3 = (Math.floor(age/10)).toString()
     console.log(age.toLocaleString)
   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
     age--;

@@ -10,20 +10,14 @@
             padding: 5px;
         }
         
-        .bordersNM {
-            border: 1px solid var(--textColor);
-        }
-        
         .bordersNMF {
-            border: 5px solid var(--textColor);
+            border: 5px solid;
         }
         
         .taskButton {
-            color: var(--textColor);
             background: var(--tileBackground);
             font-family: 'Quantico', sans-serif;
             font-size: 8px;
             border: 0;
             text-transform: uppercase;
-            // position: grid;
         }
