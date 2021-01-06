@@ -4,6 +4,7 @@ import '../src/stylesheets/viewscreen.scss'
 import '../src/stylesheets/grid.scss'
 import '../src/stylesheets/bot.scss'
 import '../src/stylesheets/controlpanel.scss'
+import '../src/stylesheets/theme.scss'
 import React from 'react';
 import Jukebox from './components/playlist/jukebox'
 import Links from './components/links/links'
@@ -21,19 +22,24 @@ export default function App() {
   return (
     <>
       {" "}
-      <div class="container">
-        <Jukebox />
-        <Pomodoro />
-        <Tasker />
-        <div className="five toprow borders hov"><Mori /> <Age/></div>
-        <Bot />
-        <div className="seven borders hov">seven - ART PANEL</div>
-        <Clock />
-        <Links />
-        <ColorControls />
-        <div className="eleven borders hov">eleven - CONTROL PANEL - USED TO ADD TO PLAYLIST?</div>
-        <div className="twelve borders hov">twelve - NOT SURE</div>
-      </div>
+        <div class="container">
+          <Jukebox />
+          <Pomodoro />
+          <Tasker />
+          <div className="five toprow borders hov">
+            <Mori /> <Age />
+          </div>
+          <Bot />
+          <div className="seven borders hov">seven - ART PANEL</div>
+          <Clock />
+          <Links />
+          <ColorControls />
+          <div className="eleven borders hov">
+            eleven - CONTROL PANEL - USED TO ADD TO PLAYLIST?
+          </div>
+          <div className="twelve borders hov">twelve - NOT SURE</div>
+        </div>
+      
     </>
   );
 }

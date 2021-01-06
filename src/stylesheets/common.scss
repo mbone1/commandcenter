@@ -5,6 +5,7 @@
     --tileBackground: rgba(255, 255, 255, 0.01);
     --tileBackgroundHov: rgba(255, 255, 255, 0.03);
     --violet: #ff9fff;
+    --turquine: #2ff5eb;
 }
 
 * {
@@ -13,12 +14,12 @@
 
 html {
     background-color: var(--background);
-    color: var(--textColor);
+    color: var(--turquine);
     font-family: "Quantico", sans-serif;
 }
 
 button {
-    color: var(--textColor);
+    color: var(--turquine);
 }
 
 //Temporary Test Classes
@@ -26,12 +27,8 @@ button {
     font-size: 30px
 }
 
-border {
-    border: 1px solid var(--violet);
-}
-
 .borders {
-    border: 1px solid var(--violet);
+    border: 1px solid var(--turquine);
     margin-top: 5px;
 }
 

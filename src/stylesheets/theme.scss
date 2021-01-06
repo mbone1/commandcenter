@@ -1,0 +1,28 @@
+@mixin themable($theme-name, $swapper) {
+    .#{$theme-name} {
+        // .container {
+        //     display: grid;
+        //     grid-column-gap: 5px;
+        //     grid-template-columns: repeat(8, 200px);
+        //     grid-auto-rows: minmax(133px, auto);
+        //     font-family: "Quantico", sans-serif;
+        //     text-transform: uppercase;
+        html {
+            background-color: var(--background);
+            color: $swapper;
+            font-family: "Quantico", sans-serif;
+        }
+        button {
+            color: $swapper;
+        }
+        .borders {
+            border: 1px solid $swapper;
+            margin-top: 5px;
+            // background: var(--background)
+        }
+    }
+}
+
+// }
+@include themable(theme-white, var(--textColor));
+@include themable(theme-turquine, var(--turquine));
