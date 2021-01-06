@@ -4,8 +4,14 @@
     --white: rgb(255, 255, 255);
     --tileBackground: rgba(255, 255, 255, 0.01);
     --tileBackgroundHov: rgba(255, 255, 255, 0.03);
-    --violet: #ff9fff;
+    --pink: #ff9fff;
     --turquine: #2ff5eb;
+    --green: #2ff549;
+    --orange: #f5c02f;
+    --red: #f52f61;
+    --purple: #952ff5;
+    --blue: #2f85f5;
+    --yellow: #e8f52f;
 }
 
 * {
@@ -14,14 +20,12 @@
 
 html {
     background-color: var(--background);
-    color: var(--turquine);
     font-family: "Quantico", sans-serif;
 }
 
-button {
-    color: var(--turquine);
-}
-
+// button {
+//     color: var(--turquine);
+// }
 //Temporary Test Classes
 .clock {
     font-size: 30px
@@ -29,6 +33,7 @@ button {
 
 .borders {
     border: 1px solid var(--turquine);
+    color: var(--turquine);
     margin-top: 5px;
 }
 

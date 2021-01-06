@@ -1,24 +1,20 @@
 @mixin themable($theme-name, $swapper) {
     .#{$theme-name} {
-        // .container {
-        //     display: grid;
-        //     grid-column-gap: 5px;
-        //     grid-template-columns: repeat(8, 200px);
-        //     grid-auto-rows: minmax(133px, auto);
-        //     font-family: "Quantico", sans-serif;
-        //     text-transform: uppercase;
-        html {
-            background-color: var(--background);
-            color: $swapper;
-            font-family: "Quantico", sans-serif;
-        }
         button {
             color: $swapper;
         }
         .borders {
             border: 1px solid $swapper;
+            color: $swapper;
             margin-top: 5px;
-            // background: var(--background)
+        }
+        //scrollbar styling
+        .playlist::-webkit-scrollbar {
+            width: 7px;
+        }
+        .playlist::-webkit-scrollbar-thumb {
+            background-color: $swapper;
+            width: 7px;
         }
     }
 }
@@ -26,3 +22,10 @@
 // }
 @include themable(theme-white, var(--textColor));
 @include themable(theme-turquine, var(--turquine));
+@include themable(theme-pink, var(--pink));
+@include themable(theme-green, var(--green));
+@include themable(theme-orange, var(--orange));
+@include themable(theme-red, var(--red));
+@include themable(theme-purple, var(--purple));
+@include themable(theme-blue, var(--blue));
+@include themable(theme-yellow, var(--yellow));

@@ -22,24 +22,23 @@ export default function App() {
   return (
     <>
       {" "}
-        <div class="container">
-          <Jukebox />
-          <Pomodoro />
-          <Tasker />
-          <div className="five toprow borders hov">
-            <Mori /> <Age />
-          </div>
-          <Bot />
-          <div className="seven borders hov">seven - ART PANEL</div>
-          <Clock />
-          <Links />
-          <ColorControls />
-          <div className="eleven borders hov">
-            eleven - CONTROL PANEL - USED TO ADD TO PLAYLIST?
-          </div>
-          <div className="twelve borders hov">twelve - NOT SURE</div>
+      <div class="container theme-yellow">
+        <Jukebox />
+        <Pomodoro />
+        <Tasker />
+        <div className="five toprow borders hov">
+          <Mori /> <Age />
         </div>
-      
+        <Bot />
+        <div className="seven borders hov">seven - ART PANEL</div>
+        <Clock />
+        <Links />
+        <ColorControls />
+        <div className="eleven borders hov">
+          eleven - CONTROL PANEL - USED TO ADD TO PLAYLIST?
+        </div>
+        <div className="twelve borders hov">twelve - NOT SURE</div>
+      </div>
     </>
   );
 }
