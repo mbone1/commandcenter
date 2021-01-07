@@ -6,6 +6,7 @@ import '../src/stylesheets/bot.scss'
 import '../src/stylesheets/controlpanel.scss'
 import '../src/stylesheets/theme.scss'
 import Jukebox from './components/playlist/jukebox'
+import Art from './components/art/art'
 import Links from './components/links/links'
 import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
@@ -21,9 +22,10 @@ import React, { useState } from "react";
 
 
 export default function App() {
+  
   const [color, setColor] = useState("white");
-
   const classes = `container theme-${color}`
+
   return (
     <>
       {" "}
@@ -35,7 +37,7 @@ export default function App() {
           <Mori /> <Age />
         </div>
         <Bot />
-        <div className="seven borders hov">seven - ART PANEL</div>
+        <div className="seven borders hov"><Art/></div>
         <Clock />
         <Links />
         {/* <ColorControls /> */}

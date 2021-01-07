@@ -31,7 +31,6 @@
     }
 }
 
-// }
 @include themable(theme-white, var(--textColor));
 @include themable(theme-turquine, var(--turquine));
 @include themable(theme-pink, var(--pink));
@@ -41,14 +40,7 @@
 @include themable(theme-purple, var(--purple));
 @include themable(theme-blue, var(--blue));
 @include themable(theme-yellow, var(--yellow));
-.fade-in {
-    animation: fadeIn ease 20s;
-    -webkit-animation: fadeIn ease 20s;
-    -moz-animation: fadeIn ease 20s;
-    -o-animation: fadeIn ease 20s;
-    -ms-animation: fadeIn ease 20s;
-}
-
+//animations
 @keyframes fadeIn {
     0% {
         opacity: 0;
