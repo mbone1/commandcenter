@@ -12,23 +12,24 @@
 }
 
 .orange {
-    background-color: orange;
+    background-color: var(--orange);
 }
 
 .green {
-    background-color: greenyellow;
+    background-color: var(--green);
 }
 
 .pink {
-    background-color: pink
+    background-color: var(--pink);
 }
 
 .red {
-    background-color: red;
+    background-color: var(--red);
 }
 
-.violet {
-    background-color: #ff9fff;
+.purple {
+    // background-color: #ff9fff;
+    background-color: var(--purple)
 }
 
 .lightblue {
@@ -36,15 +37,16 @@
 }
 
 .blue {
-    background-color: blue;
+    // background-color: blue;
+    background-color: var(--blue)
 }
 
 .yellow {
-    background-color: yellow;
+    background-color: var(--yellow);
 }
 
 .turquoise {
-    background-color: turquoise;
+    background-color: var(--turquine);
 }
 
 .white {

@@ -5,7 +5,6 @@ import '../src/stylesheets/grid.scss'
 import '../src/stylesheets/bot.scss'
 import '../src/stylesheets/controlpanel.scss'
 import '../src/stylesheets/theme.scss'
-import React from 'react';
 import Jukebox from './components/playlist/jukebox'
 import Links from './components/links/links'
 import Pomodoro from './components/pomodoro/pomodoro'
@@ -15,14 +14,20 @@ import Clock from './components/clock/clock'
 import ColorControls from './components/controlpanel/colorcontrols'
 import Mori from './components/memento/mori'
 import Age from './components/memento/age'
+import React, { useState } from "react";
+
+ 
 
 
 
 export default function App() {
+  const [color, setColor] = useState();
+
+  const classes = `container theme-${color}`
   return (
     <>
       {" "}
-      <div class="container theme-purple">
+      <div class={classes}>
         <Jukebox />
         <Pomodoro />
         <Tasker />
@@ -33,7 +38,40 @@ export default function App() {
         <div className="seven borders hov">seven - ART PANEL</div>
         <Clock />
         <Links />
-        <ColorControls />
+        {/* <ColorControls /> */}
+        <div className="ten borders hov holder">
+          <button
+            className="cButton orange"
+            onClick={() => setColor("orange")}></button>
+          <button
+            className="cButton green"
+            onClick={() => setColor("green")}></button>
+          <button
+            className="cButton pink"
+            onClick={() => setColor("pink")}></button>
+          <button
+            className="cButton red"
+            onClick={() => setColor("red")}></button>
+          <button
+            className="cButton purple"
+            onClick={() => setColor("purple")}></button>
+          <button
+            className="cButton lightblue"
+            onClick={() => setColor("green")}></button>
+          <button
+            className="cButton blue"
+            onClick={() => setColor("blue")}></button>
+          <button
+            className="cButton yellow"
+            onClick={() => setColor("yellow")}></button>
+          <button
+            className="cButton turquoise"
+            onClick={() => setColor("turquine")}></button>
+          <button
+            className="cButton white"
+            onClick={() => setColor("white")}></button>
+        </div>
+
         <div className="eleven borders hov">
           eleven - CONTROL PANEL - USED TO ADD TO PLAYLIST?
         </div>
