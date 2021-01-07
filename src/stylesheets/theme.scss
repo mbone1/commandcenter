@@ -16,6 +16,16 @@
             background-color: $swapper;
             width: 7px;
         }
+        //button animations
+        .invert:hover {
+            color: var(--background);
+            background-color: $swapper;
+        }
+        .invert:focus {
+            background-color: $swapper;
+            color: var(--background);
+            outline: none;
+        }
     }
 }
 

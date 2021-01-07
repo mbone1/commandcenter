@@ -43,17 +43,6 @@ html {
 }
 
 //animations
-.invert:hover {
-    color: var(--background);
-    background-color: var(--textColor);
-}
-
-.invert:focus {
-    background-color: var(--textColor);
-    color: var(--background);
-    outline: none;
-}
-
 .hov:hover {
     background: var(--tileBackgroundHov);
 }

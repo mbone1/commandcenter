@@ -22,7 +22,7 @@ export default function App() {
   return (
     <>
       {" "}
-      <div class="container theme-yellow">
+      <div class="container theme-purple">
         <Jukebox />
         <Pomodoro />
         <Tasker />
