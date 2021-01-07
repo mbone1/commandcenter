@@ -2,11 +2,13 @@
     .#{$theme-name} {
         button {
             color: $swapper;
+            animation: fadeIn ease 1s
         }
         .borders {
             border: 1px solid $swapper;
             color: $swapper;
             margin-top: 5px;
+            animation: fadeIn ease 1s
         }
         //scrollbar styling
         .playlist::-webkit-scrollbar {
@@ -39,3 +41,55 @@
 @include themable(theme-purple, var(--purple));
 @include themable(theme-blue, var(--blue));
 @include themable(theme-yellow, var(--yellow));
+.fade-in {
+    animation: fadeIn ease 20s;
+    -webkit-animation: fadeIn ease 20s;
+    -moz-animation: fadeIn ease 20s;
+    -o-animation: fadeIn ease 20s;
+    -ms-animation: fadeIn ease 20s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

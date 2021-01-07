@@ -17,6 +17,15 @@
     // grid-row: 2/2;
 }
 
+.botContainerThree {
+    grid-column: span 3;
+    position: absolute;
+    left: 275px;
+    top: 713px;
+    height: 85px;
+    width: 535px
+}
+
 .sideBtn {
     transform: rotate(90deg);
     background-color: var(--background);

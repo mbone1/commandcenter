@@ -21,7 +21,7 @@ import React, { useState } from "react";
 
 
 export default function App() {
-  const [color, setColor] = useState();
+  const [color, setColor] = useState("white");
 
   const classes = `container theme-${color}`
   return (
