@@ -22,7 +22,7 @@ export default function Bot() {
             onClick={() => setSource(Skull)}>
             SBT
           </button>
-          <div className="namePlate borders">SkullBot</div>
+          <div className="namePlate borders">Memento Mori</div>
         </div>
         <img className="kubot borders" src={source} alt="bot" />
         <div className="botContainerTwo">
