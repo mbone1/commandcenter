@@ -4,11 +4,19 @@ import Sketch from "react-p5";
 
 let diam = 100
 let change = 2.2
+const diamState = {
+  isPressed: diam,
+  isNotPressed: null
+}
+
+
+
 export default class Art extends Component {
   // const[diamState, setDiamState] = useState();
   x = 210;
   y = 160;
   cirNum = 10;
+  
   
   setup = (p5, parent) => {
     p5.createCanvas(400, 390).parent(parent);
@@ -32,7 +40,7 @@ export default class Art extends Component {
     //main graph
     p5.strokeWeight(1);
     p5.stroke('red')
-    p5.circle(p5.width/2, p5.height/2, (diam-1))
+    p5.circle(p5.width/2, p5.height/2, (`${diamState.isPressed}1`))
     p5.circle(p5.width/2, p5.height/2, (diam-2))
     // p5.stroke('red')
     // p5.circle(p5.width/2, p5.height/2, (diam-8))
@@ -51,7 +59,7 @@ export default class Art extends Component {
     // p5.circle(p5.width/2, p5.height/2, (diam-29))
     // p5.circle(p5.width/2, p5.height/2, (diam-30))
     p5.circle(p5.width/2, p5.height/2, (diam-31))
-    // p5.stroke('white')
+    p5.stroke('orange')
     p5.circle(p5.width/2, p5.height/2, (diam-34))
     // p5.circle(p5.width/2, p5.height/2, (diam-35))
     p5.circle(p5.width/2, p5.height/2, (diam-36))
@@ -67,12 +75,20 @@ export default class Art extends Component {
     p5.circle(p5.width/2, p5.height/2, (diam-49))
     p5.circle(p5.width/2, p5.height/2, (diam-70))
     p5.circle(p5.width/2, p5.height/2, (diam-60))
-    p5.circle(p5.width/2, p5.height/2, (90))
     p5.circle(p5.width/2, p5.height/2, (diam-45))
     p5.circle(p5.width/2, p5.height/2, (diam-50))
     p5.circle(p5.width/2, p5.height/2, (diam-60))
     p5.circle(p5.width/2, p5.height/2, diam - 70)
     p5.circle(p5.width/2, p5.height/2, diam - 90)
+    p5.strokeWeight(6);
+    p5.stroke('white')
+    p5.circle(p5.width/2, p5.height/2, (`${diamState.isPressed}`- 70))
+    p5.circle(p5.width/2, p5.height/2, (diam - 70))
+    p5.strokeWeight(3);
+    p5.stroke('red')
+    p5.circle(p5.width/2, p5.height/2, (60))
+    p5.stroke('white')
+    p5.circle(p5.width/2, p5.height/2, (50))
     // p5.circle(p5.width / 2, p5.height / 2, diam - 110);
     // p5.circle(p5.width / 2, p5.height / 2, diam - 130);
     // p5.circle(p5.width / 2, p5.height / 2, diam - 140);

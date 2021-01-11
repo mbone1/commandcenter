@@ -43,35 +43,35 @@ export default function App() {
         {/* <ColorControls /> */}
         <div className="ten borders hov holder">
           <button
+            className="cButton white"
+            onClick={() => setColor("white")}></button>
+            <button
+              className="cButton yellow"
+              onClick={() => setColor("yellow")}></button>
+          <button
             className="cButton orange"
             onClick={() => setColor("orange")}></button>
-          <button
-            className="cButton green"
-            onClick={() => setColor("green")}></button>
-          <button
-            className="cButton pink"
-            onClick={() => setColor("pink")}></button>
           <button
             className="cButton red"
             onClick={() => setColor("red")}></button>
           <button
+            className="cButton pink"
+            onClick={() => setColor("pink")}></button>
+          <button
             className="cButton purple"
             onClick={() => setColor("purple")}></button>
-          <button
-            className="cButton lightblue"
-            onClick={() => setColor("green")}></button>
           <button
             className="cButton blue"
             onClick={() => setColor("blue")}></button>
           <button
-            className="cButton yellow"
-            onClick={() => setColor("yellow")}></button>
-          <button
             className="cButton turquoise"
             onClick={() => setColor("turquine")}></button>
           <button
-            className="cButton white"
-            onClick={() => setColor("white")}></button>
+            className="cButton green"
+            onClick={() => setColor("green")}></button>
+          <button
+            className="cButton lightblue"
+            onClick={() => setColor("green")}></button>
         </div>
 
         <div className="eleven borders hov">
