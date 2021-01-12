@@ -4,25 +4,13 @@ import Sketch from "react-p5";
 
 let diam = 100
 let change = 2.2
-let diamState = true;
+let breathe = true;
 
 
-// export default (props) => {
-//   const [clicked, isClicked] = useState()
-  
-//   const setup = (p5, canvasParentRef) => {
-//     p5.createCanvas(500, 500).parent(canvasParentRef);
-//   }
-
-//   const draw = (p5) => {
-//     p5.background('black')
-//   }
-// }
 
 
 
 export default class Art extends Component {
-  // const[diamState, setDiamState] = useState();
   x = 210;
   y = 160;
   cirNum = 10;
@@ -33,7 +21,7 @@ export default class Art extends Component {
   };
   draw = (p5) => {
 
-    if (diamState === true) {
+    if (breathe === true) {
       diam += change;
       if (diam > p5.width * 1.5) {
         change = -change;
@@ -41,12 +29,7 @@ export default class Art extends Component {
         change = -change;
       }
     }
-    else if (diamState === false)
-    {
-      let diam = 0
-      let change = 0
-    }
-
+ 
     
 
   p5.background('black');
@@ -60,8 +43,8 @@ export default class Art extends Component {
     p5.noFill();
     //main graph
     p5.strokeWeight(1);
-    p5.stroke('red')
-    p5.circle(p5.width/2, p5.height/2, (`${diamState.isPressed}1`))
+    p5.stroke('pink')
+  
     p5.circle(p5.width/2, p5.height/2, (diam-2))
     // p5.stroke('red')
     // p5.circle(p5.width/2, p5.height/2, (diam-8))
@@ -80,7 +63,7 @@ export default class Art extends Component {
     // p5.circle(p5.width/2, p5.height/2, (diam-29))
     // p5.circle(p5.width/2, p5.height/2, (diam-30))
     p5.circle(p5.width/2, p5.height/2, (diam-31))
-    p5.stroke('orange')
+    p5.stroke('turquoise')
     p5.circle(p5.width/2, p5.height/2, (diam-34))
     // p5.circle(p5.width/2, p5.height/2, (diam-35))
     p5.circle(p5.width/2, p5.height/2, (diam-36))
@@ -102,7 +85,7 @@ export default class Art extends Component {
     p5.circle(p5.width/2, p5.height/2, diam - 70)
     p5.circle(p5.width/2, p5.height/2, diam - 90)
     p5.strokeWeight(6);
-    p5.stroke('white')
+    p5.stroke('purple')
     // console.log(diamState)
     p5.circle(p5.width/2, p5.height/2, (diam - 70))
     p5.stroke('red')
