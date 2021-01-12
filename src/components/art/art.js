@@ -4,10 +4,20 @@ import Sketch from "react-p5";
 
 let diam = 100
 let change = 2.2
-const diamState = {
-  isPressed: diam,
-  isNotPressed: null
-}
+let diamState = true;
+
+
+// export default (props) => {
+//   const [clicked, isClicked] = useState()
+  
+//   const setup = (p5, canvasParentRef) => {
+//     p5.createCanvas(500, 500).parent(canvasParentRef);
+//   }
+
+//   const draw = (p5) => {
+//     p5.background('black')
+//   }
+// }
 
 
 
@@ -23,14 +33,25 @@ export default class Art extends Component {
   };
   draw = (p5) => {
 
+    if (diamState === true) {
       diam += change;
       if (diam > p5.width * 1.5) {
         change = -change;
       } else if (diam < 70) {
         change = -change;
+      }
     }
+    else if (diamState === false)
+    {
+      let diam = 0
+      let change = 0
+    }
+
     
-    p5.background('black');
+
+  p5.background('black');
+
+    
     // p5.noCursor();
     // p5.noStroke();
     // p5.fill('white');
@@ -82,8 +103,11 @@ export default class Art extends Component {
     p5.circle(p5.width/2, p5.height/2, diam - 90)
     p5.strokeWeight(6);
     p5.stroke('white')
-    p5.circle(p5.width/2, p5.height/2, (`${diamState.isPressed}`- 70))
+    // console.log(diamState)
     p5.circle(p5.width/2, p5.height/2, (diam - 70))
+    p5.stroke('red')
+    p5.circle(p5.width/2, p5.height/2, (30))
+    // p5.circle(p5.width/2, p5.height/2, (diam - 70))
     p5.strokeWeight(3);
     p5.stroke('red')
     p5.circle(p5.width/2, p5.height/2, (60))
