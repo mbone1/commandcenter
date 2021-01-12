@@ -1,6 +1,7 @@
 import { fill, push } from "core-js/fn/array";
 import React, { Component, useState } from "react";
 import Sketch from "react-p5";
+import '../../stylesheets/breathe.scss'
 
 let diam = 100
 let change = 2.2
@@ -74,10 +75,19 @@ export default class Art extends Component {
     p5.circle(p5.width/2, p5.height/2, (50))
   };
   render() {
-    return <>
-      <Sketch setup={this.setup} draw={this.draw} />
-      <button onClick={this.handleClick}>{this.state.breathing ? 'breathe' : 'hold'}</button>
-    </>
+    return (
+      <div className="breatheContainer">
+        <div className="breatheContainerOne">
+          <Sketch setup={this.setup} draw={this.draw} />
+          <button
+            className="breatheBtn borders invert breatheText"
+            onClick={this.handleClick}>
+            <span className="breatheText">BREATHE</span>
+            
+          </button>
+        </div>
+      </div>
+    );
 
   }
 }

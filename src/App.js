@@ -75,7 +75,6 @@ export default function App() {
         </div>
 
         <div className="eleven borders hov">
-          eleven - CONTROL PANEL - USED TO ADD TO PLAYLIST?
         </div>
         <div className="twelve borders hov">twelve - NOT SURE</div>
       </div>

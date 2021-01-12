@@ -1,0 +1,23 @@
+    .breatheBtn {
+        background-color: var(--background);
+        text-transform: uppercase;
+        font-family: 'Quantico', sans-serif;
+        font-size: 15px;
+        position: absolute;
+        border: 0;
+        bottom: 0px;
+        left: 160px;
+    }
+    
+    .breatheContainerOne {
+        grid-column: span 1;
+        grid-row: span 1;
+        position: absolute;
+    }
+    
+    .breatheContainer {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(0, auto);
+    }
