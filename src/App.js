@@ -16,7 +16,9 @@ import Clock from './components/clock/clock'
 import ColorControls from './components/controlpanel/colorcontrols'
 import Mori from './components/memento/mori'
 import Age from './components/memento/age'
+import Adder from './components/playlist/adder'
 import React, { useState } from "react";
+
 
  
 
@@ -76,6 +78,7 @@ export default function App() {
         </div>
 
         <div className="eleven borders hov">
+          <Adder />
         </div>
         <Floaters />
       </div>
