@@ -7,6 +7,7 @@ import '../src/stylesheets/controlpanel.scss'
 import '../src/stylesheets/theme.scss'
 import Jukebox from './components/playlist/jukebox'
 import Art from './components/art/art'
+import Floaters from './components/art/floaters'
 import Links from './components/links/links'
 import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
@@ -76,7 +77,7 @@ export default function App() {
 
         <div className="eleven borders hov">
         </div>
-        <div className="twelve borders hov">twelve - NOT SURE</div>
+        <Floaters />
       </div>
     </>
   );
