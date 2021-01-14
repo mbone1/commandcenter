@@ -1,10 +1,14 @@
 
 import React, { useState } from "react";
-import playlists from '../../playlists'
+// import playlists from '../../playlists'
 
 export default function Jukebox() {
   //variable created to swap 'src' and change video displayed
   const [source, setSource] = useState("");
+
+  let playlists = JSON.parse(localStorage.getItem('playlist'))
+  // let congo = JSON.stringify(playlists)
+  // localStorage.setItem('playlist', congo)
 
   //maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
   const listItems = playlists.map((playlist) => (
@@ -39,3 +43,4 @@ export default function Jukebox() {
         </>
     )
 }
+            

@@ -10,6 +10,11 @@
             margin-top: 5px;
             animation: fadeIn ease 1s
         }
+        .borders3 {
+            border: 1px solid $swapper;
+            color: $swapper;
+            animation: fadeIn ease 1s
+        }
         //scrollbar styling
         .playlist::-webkit-scrollbar {
             width: 7px;
