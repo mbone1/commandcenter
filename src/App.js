@@ -25,13 +25,22 @@ import React, { useState } from "react";
 
 
 export default function App() {
-  
-  const [color, setColor] = useState("white");
-  const classes = `container theme-${color}`
+  //sets color default to white if nothing is found in local storage
+  const colorPref = () => {
+    if (JSON.parse(localStorage.getItem('colorpref')) === null) {
+      return ("white")
+    } else {
+      return (JSON.parse(localStorage.getItem('colorpref')))
+    }
+  };
+  const [color, setColor] = useState(colorPref);
+  //allows colors to be passed in to change class
+  const classes = `container theme-${color}`;
+  //allows color to persist after refresh/shutdown
+  localStorage.setItem('colorpref', JSON.stringify(color))
 
   return (
     <>
-      {" "}
       <div class={classes}>
         <Jukebox />
         <Pomodoro />
@@ -47,6 +56,7 @@ export default function App() {
         <div className="ten borders hov holder">
           <button
             className="cButton white"
+            name="color"
             onClick={() => setColor("white")}></button>
             <button
               className="cButton yellow"
@@ -74,9 +84,8 @@ export default function App() {
             onClick={() => setColor("green")}></button>
           <button
             className="cButton lightblue"
-            onClick={() => setColor("green")}></button>
+            onClick={() => setColor("rainbow")}></button>
         </div>
-
         <div className="eleven borders hov">
           <Adder />
         </div>
@@ -85,6 +94,9 @@ export default function App() {
     </>
   );
 }
+ 
+
+
 
 
   

@@ -8,12 +8,12 @@
             border: 1px solid $swapper;
             color: $swapper;
             margin-top: 5px;
-            animation: fadeIn ease 1s
+            animation: fadeIn ease-in 1s
         }
         .borders3 {
             border: 1px solid $swapper;
             color: $swapper;
-            animation: fadeIn ease 1s
+            animation: fadeIn ease-in 1s
         }
         //scrollbar styling
         .playlist::-webkit-scrollbar {
@@ -45,6 +45,7 @@
 @include themable(theme-purple, var(--purple));
 @include themable(theme-blue, var(--blue));
 @include themable(theme-yellow, var(--yellow));
+@include themable(theme-rainbow, var(--textColor));
 //animations
 @keyframes fadeIn {
     0% {
@@ -88,5 +89,41 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+// p {
+//     animation: color-change 1s infinite;
+// }
+@keyframes color-change {
+    0% {
+        color: var(--textColor);
+    }
+    10% {
+        color: var(--yellow);
+    }
+    20% {
+        color: var(--orange);
+    }
+    30% {
+        color: var(--red);
+    }
+    40% {
+        color: var(--pink);
+    }
+    50% {
+        color: var(--purple);
+    }
+    60% {
+        color: var(--blue);
+    }
+    70% {
+        color: var(--turquine);
+    }
+    80% {
+        color: var(--green);
+    }
+    100% {
+        color: var(--textColor);
     }
 }
