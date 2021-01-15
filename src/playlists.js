@@ -1,4 +1,4 @@
-let playlists = [
+let defaultPlaylist = [
   {
     Name: "Green",
     SRC: "https://www.youtube.com/embed/D7aYjRl_6Zw?color=white;",
@@ -110,4 +110,4 @@ let playlists = [
 ];
   
 
-export default playlists;
+export default defaultPlaylist;

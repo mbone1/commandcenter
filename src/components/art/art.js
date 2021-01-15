@@ -17,7 +17,6 @@ let change = 2.2
 export default class Art extends Component {
   constructor(props) {
     super(props);
-    console.log(props)
     this.state = { breathing: false }
     this.handleClick = this.handleClick.bind(this);
   }

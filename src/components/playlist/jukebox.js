@@ -1,13 +1,21 @@
 import React, { useState } from "react";
-
+import defaultPlaylist from "../../playlists";
 
 export default function Jukebox() {
   //variable created to swap 'src' and change video displayed
   const [source, setSource] = useState("");
-  // retrieves playlist data from local storage, can i do an if statement to search first and then use something else if doesn't exist?
-  let playlists = JSON.parse(localStorage.getItem('playlist'))
+  
+  // runs a check to see if any data is present in local storage, returns a default playlist if not
+  const playlistChecker = () => {
+    if (JSON.parse(localStorage.getItem('playlist')) === null) {
+      return defaultPlaylist;
+    } else {
+      return JSON.parse(localStorage.getItem("playlist"));
+    }
+  };
+
   //maps over playlist file and appends buttons to page, manipulates source of 'iframe' component
-  const listItems = playlists.map((playlist) => (
+  const listItems = playlistChecker().map((playlist) => (
     <>
       <button
         class="playlist-button invert"
@@ -19,6 +27,7 @@ export default function Jukebox() {
       <br />
     </>
   ));
+  
   return (<>
          <div class="playlist hov borders toprow one">{listItems}</div>
       <div className="viewscreenContainer toprow borders two hov">
@@ -38,6 +47,8 @@ export default function Jukebox() {
       </>
   )
 }
+
+
   
 
     
