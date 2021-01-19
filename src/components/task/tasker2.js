@@ -9,21 +9,21 @@ const taskChecker = () => {
         return JSON.parse(localStorage.getItem('tasks'))
     }
 }
-
 const defaultTask = [{
     task: "get things done",
     isFocused: true
   }]
 
+
 export default function Tasker() {
-    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')));
-    console.log()
+    const [tasks, setTasks] = useState({});
 
     const addTaskToLocalStorage = (data) => {
     //creates empty array
     let taskArray = [];
     //takes data from storage, parses out and places into empty array
-    taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+      taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+      console.log(taskArray)
     //pushes new data into playlist
     taskArray.push(data);
     //re-adds back to local storage with addition of new data
@@ -32,7 +32,7 @@ export default function Tasker() {
     setTasks(taskArray)    
     };
     
-    localStorage.setItem('tasks', JSON.stringify(defaultTask))
+    // localStorage.setItem('tasks', JSON.stringify(defaultTask))
 
     const removeTaskFromLocalStorage = (index) => {
     //empty array to store local storage data    
@@ -78,7 +78,7 @@ export default function Tasker() {
 
     return (
     <div className="tasks four hov borders">
-        {tasks.map((task, index) => (
+        {taskChecker().map((task, index) => (
           <Task2
             key={index}
             index={index}
