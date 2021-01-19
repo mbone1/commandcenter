@@ -1,96 +1,109 @@
 import React, { useState } from "react";
-import Task from './task'
-import TaskForm from './taskform'
-import '../../stylesheets/tasker.scss'
+import Task from "./task";
+import TaskForm from "./taskform";
 
+const taskChecker = () => {
+    if (JSON.parse(localStorage.getItem('tasks')) === null) {
+        return defaultTask;
+    } else {
+        return JSON.parse(localStorage.getItem('tasks'))
+    }
+}
+const defaultTask = [{
+    task: "get things done",
+    isFocused: true
+  }]
+
+const startCount = 0
 
 export default function Tasker() {
-  const [tasks, setTasks] = useState([
-    {
-      text: "Aspire to the purity of the blessed machine",
-      isCompleted: false,
-      isFocused: false,
-    },
-    {
-      text: "Crave for strength and the certainty of steel",
-      isCompleted: false,
-      isFocused: false,
-    },
-    {
-      text: "Add functionality for persistence/PWA/Local Storage",
-      isCompleted: false,
-      isFocused: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState({});
+  const [completed, setCompleted] = useState()
 
-
-   const saveToLocalStorage = (data) => {
-     //creates empty array
-     let listArray = [];
-     //takes data from storage, parses out and places into empty array
-     listArray = JSON.parse(localStorage.getItem("tasks")) || [];
-     //pushes new data into playlist
-     listArray.push(data);
-     //re-adds back to local storage with addition of new data
-     localStorage.setItem("tasks", JSON.stringify(listArray));
-  };
-  
-
-
-  //ability to add a new task
-  const addTask = (text) => {
-    const newTasks = [...tasks, { text }];
-    setTasks(newTasks);
-  };
-  //complete task, changes to true
-  const completeTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks[index].isCompleted = true;
-    setTasks(newTasks);
-  };
-  //uncomplete task, changes to false
-  const uncompleteTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks[index].isCompleted = false;
-    setTasks(newTasks);
-  };
-  //add focus to task, will be used to add class highlight task
-  const focusTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks[index].isFocused = true;
-    setTasks(newTasks);
-  };
-  //remove focus from task
-  const unFocusTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks[index].isFocused = false;
-    setTasks(newTasks);
-  };
-  //delete/remove task referenced by index
-  const removeTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks.splice(index, 1);
-    setTasks(newTasks);
+    const addTaskToLocalStorage = (data) => {
+    //creates empty array
+    let taskArray = [];
+    //takes data from storage, parses out and places into empty array
+      taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+      console.log(taskArray)
+    //pushes new data into playlist
+    taskArray.push(data);
+    //re-adds back to local storage with addition of new data
+    localStorage.setItem("tasks", JSON.stringify(taskArray));
+    //updates state
+    setTasks(taskArray)    
     };
     
+
+    const removeTaskFromLocalStorage = (index) => {
+    //empty array to store local storage data    
+    let taskArray = [];
+    //array becomes the items retrieved from tasks    
+    taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+    //removes the selected task
+    taskArray.splice(index, 1);
+    //sets items minus the deleted item back in localStorage
+    localStorage.setItem('tasks', JSON.stringify(taskArray))
+    //updates state
+      setTasks(taskArray)
+      counter()
+    };
+
+    const focusTask = (index) => {
+      //empty array to store local storage data
+      let taskArray = [];
+      //array becomes the items retrieved from tasks
+      taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+      
+        taskArray[index].isFocused = true;
+        
+        localStorage.setItem('tasks', JSON.stringify(taskArray))
+        
+        setTasks(taskArray)
+    };
+
+    //remove focus from task
+    const unFocusTask = (index) => {
+      //empty array to store local storage data
+      let taskArray = [];
+      //array becomes the items retrieved from tasks
+      taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+
+      taskArray[index].isFocused = false;
+
+      localStorage.setItem("tasks", JSON.stringify(taskArray));
+
+      setTasks(taskArray);
+    };
+
+  const counter = () => {
+    let count = JSON.parse(localStorage.getItem("count")) || [];
+    let newCount = count + 1
+    localStorage.setItem('count', JSON.stringify(newCount))
+    setCompleted(newCount)
+  }
+ 
+
     return (
-      <div className="tasks four hov borders">
-        {tasks.map((task, index) => (
+    <div className="tasks four hov borders">
+        {taskChecker().map((task, index) => (
           <Task
             key={index}
             index={index}
             task={task}
-            completeTask={completeTask}
-            uncompleteTask={uncompleteTask}
-            removeTask={removeTask}
+            removeTaskFromLocalStorage={removeTaskFromLocalStorage}
             focusTask={focusTask}
             unFocusTask={unFocusTask}>
-            {task}
+            {task[index]}
           </Task>
         ))}
         
-          <TaskForm addTask={addTask} />
+          <TaskForm addTaskToLocalStorage={addTaskToLocalStorage} />
+    </div>
+)
+
+
     
-      </div>
-    );
+
+
 }

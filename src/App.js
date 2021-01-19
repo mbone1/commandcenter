@@ -11,7 +11,6 @@ import Floaters from './components/art/floaters'
 import Links from './components/links/links'
 import Pomodoro from './components/pomodoro/pomodoro'
 import Tasker from './components/task/tasker'
-import Tasker2 from './components/task/tasker2'
 import Bot from './components/bot/bot';
 import Clock from './components/clock/clock'
 import ColorControls from './components/controlpanel/colorcontrols'
@@ -46,7 +45,7 @@ export default function App() {
       <div class={classes}>
         <Jukebox />
         <Pomodoro />
-        <Tasker2 />
+        <Tasker />
         <div className="five toprow borders hov">
           <Mori /> <Age />
         </div>

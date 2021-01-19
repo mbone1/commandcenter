@@ -1,34 +1,24 @@
 import '../../stylesheets/tasker.scss'
 
-export default function Task({ task, index, completeTask, uncompleteTask, removeTask, focusTask, unFocusTask }) {
-  return (
-    <div
-      className={task.isFocused ? "task bordersNMF" : "task borders"}
-      style={{ textDecoration: task.isCompleted ? "line-through" : "" }}>
-      {task.text}
-      <div>
-        <button
-          className="taskButton invert"
-          onClick={() => completeTask(index)}>
-          Complete
+export default function Task({ task, index, removeTaskFromLocalStorage, focusTask, unFocusTask }) {
+    return (
+        <div
+            className={task.isFocused ? "task bordersNMF" : "task borders"}
+            >
+            {task.task}
+            <div>
+                <button className="taskButton invert" onClick={() => focusTask(index)}>
+                    focus
         </button>
-        <button
-          className="taskButton invert"
-          onClick={() => uncompleteTask(index)}>
-          unComplete
+                <button
+                    className="taskButton invert"
+                    onClick={() => unFocusTask(index)}>
+                    unfocus
         </button>
-        <button className="taskButton invert" onClick={() => focusTask(index)}>
-          focus
+                <button className="taskButton invert" onClick={() => removeTaskFromLocalStorage(index)}>
+                    Delete
         </button>
-        <button
-          className="taskButton invert"
-          onClick={() => unFocusTask(index)}>
-          unfocus
-        </button>
-        <button className="taskButton invert" onClick={() => removeTask(index)}>
-          Delete
-        </button>
-      </div>
-    </div>
-  );
+            </div>
+        </div>
+    )
 }
