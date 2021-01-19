@@ -29,7 +29,7 @@ export default function Tasker() {
     //re-adds back to local storage with addition of new data
     localStorage.setItem("tasks", JSON.stringify(taskArray));
     //updates state
-    setTasks(taskArray)    
+    // setTasks(taskArray)    
     };
     
     localStorage.setItem('tasks', JSON.stringify(defaultTask))
@@ -90,7 +90,7 @@ export default function Tasker() {
           </Task2>
         ))}
         
-          <TaskForm2 addTask={addTaskToLocalStorage} />
+          <TaskForm2 addTaskToLocalStorage={addTaskToLocalStorage} />
     </div>
 )
 

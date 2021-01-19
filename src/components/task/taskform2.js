@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-export default function TaskForm({ saveToLocalStorage }) {
+export default function TaskForm({ addTaskToLocalStorage }) {
     const [value, setValue] = useState();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!value) return;
-        saveToLocalStorage(value)
+        addTaskToLocalStorage(value)
         setValue("");
     }
 
