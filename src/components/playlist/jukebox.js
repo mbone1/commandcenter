@@ -3,7 +3,7 @@ import defaultPlaylist from "../../playlists";
 
 export default function Jukebox() {
   //variable created to swap 'src' and change video displayed
-  const [source, setSource] = useState("");
+  const [source, setSource] = useState();
   
   // runs a check to see if any data is present in local storage, returns a default playlist if not
   const playlistChecker = () => {

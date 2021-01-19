@@ -23,6 +23,20 @@ export default function Tasker() {
     },
   ]);
 
+
+   const saveToLocalStorage = (data) => {
+     //creates empty array
+     let listArray = [];
+     //takes data from storage, parses out and places into empty array
+     listArray = JSON.parse(localStorage.getItem("tasks")) || [];
+     //pushes new data into playlist
+     listArray.push(data);
+     //re-adds back to local storage with addition of new data
+     localStorage.setItem("tasks", JSON.stringify(listArray));
+  };
+  
+
+
   //ability to add a new task
   const addTask = (text) => {
     const newTasks = [...tasks, { text }];

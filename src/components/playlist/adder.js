@@ -17,10 +17,11 @@ export default function Adder() {
     e.preventDefault();
     if (!video) return;
     saveToLocalStorage(video)
+    setVideo("")
+    console.log(video)
   }
   //function below saves to storage
   const saveToLocalStorage = (data) => {
-    console.log(data)
     //creates empty array
     let listArray = [];
     //takes data from storage, parses out and places into empty array
@@ -34,10 +35,10 @@ export default function Adder() {
     <div>
       <form>
         <label>Name</label>
-        <input type="text" name="Name" onChange={handleChange}></input>
+        <input type="text" name="Name" value={video.name} onChange={handleChange}></input>
         <br></br>
         <label>URL</label>
-        <input type="text" name="SRC" onChange={handleChange}></input>
+        <input type="text" name="SRC" value={video.value} onChange={handleChange}></input>
         <button type="submit" onClick={handleSubmit}></button>
       </form>
     </div>
