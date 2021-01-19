@@ -19,7 +19,6 @@ const startCount = 0
 export default function Tasker() {
   const [tasks, setTasks] = useState({});
   const [completed, setCompleted] = useState()
-
     const addTaskToLocalStorage = (data) => {
     //creates empty array
     let taskArray = [];
@@ -78,7 +77,8 @@ export default function Tasker() {
 
   const counter = () => {
     let count = JSON.parse(localStorage.getItem("count")) || [];
-    let newCount = count + 1
+    let convertCount = parseInt(count, 10)
+    let newCount = convertCount + 1
     localStorage.setItem('count', JSON.stringify(newCount))
     setCompleted(newCount)
   }
