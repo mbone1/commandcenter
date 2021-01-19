@@ -14,9 +14,11 @@ const defaultTask = [{
     isFocused: true
   }]
 
+const startCount = 0
 
 export default function Tasker() {
-    const [tasks, setTasks] = useState({});
+  const [tasks, setTasks] = useState({});
+  const [completed, setCompleted] = useState()
 
     const addTaskToLocalStorage = (data) => {
     //creates empty array
@@ -32,7 +34,6 @@ export default function Tasker() {
     setTasks(taskArray)    
     };
     
-    // localStorage.setItem('tasks', JSON.stringify(defaultTask))
 
     const removeTaskFromLocalStorage = (index) => {
     //empty array to store local storage data    
@@ -44,7 +45,8 @@ export default function Tasker() {
     //sets items minus the deleted item back in localStorage
     localStorage.setItem('tasks', JSON.stringify(taskArray))
     //updates state
-    setTasks(taskArray)
+      setTasks(taskArray)
+      counter()
     };
 
     const focusTask = (index) => {
@@ -74,6 +76,12 @@ export default function Tasker() {
       setTasks(taskArray);
     };
 
+  const counter = () => {
+    let count = JSON.parse(localStorage.getItem("count")) || [];
+    let newCount = count + 1
+    localStorage.setItem('count', JSON.stringify(newCount))
+    setCompleted(newCount)
+  }
  
 
     return (
