@@ -13,10 +13,10 @@ const taskChecker = () => {
 const defaultTask = [{
     task: "get things done",
     isFocused: true
+  }]
 
-}]
 export default function Tasker() {
-    const [tasks, setTasks] = useState(taskChecker());
+    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')));
     console.log()
 
     const addTaskToLocalStorage = (data) => {
@@ -29,7 +29,7 @@ export default function Tasker() {
     //re-adds back to local storage with addition of new data
     localStorage.setItem("tasks", JSON.stringify(taskArray));
     //updates state
-    // setTasks(taskArray)    
+    setTasks(taskArray)    
     };
     
     localStorage.setItem('tasks', JSON.stringify(defaultTask))

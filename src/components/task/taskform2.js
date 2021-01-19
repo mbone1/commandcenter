@@ -7,6 +7,7 @@ export default function TaskForm({ addTaskToLocalStorage }) {
         setValue({
             // ...value,
             [name]: value,
+            isFocused: false
         })
     }
 
