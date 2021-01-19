@@ -6,7 +6,6 @@ export default function Adder() {
   const handleChange = (e) => {
     //changes the value of video object to values entered in fields
     const { name, value } = e.target;
-    console.log(e)
     setVideo({
       ...video,
       [name]: value,
@@ -18,7 +17,6 @@ export default function Adder() {
     if (!video) return;
     saveToLocalStorage(video)
     setVideo("")
-    console.log(video)
   }
   //function below saves to storage
   const saveToLocalStorage = (data) => {

@@ -3,10 +3,10 @@ import React, { useState } from "react";
 export default function TaskForm({ addTaskToLocalStorage }) {
     const [value, setValue] = useState("");
     const handleChange = (e) => {
-        const { task, focused } = e.target;
+        const { name, value } = e.target;
         setValue({
-            ...value,
-            [task]: focused,
+            // ...value,
+            [name]: value,
         })
     }
 
@@ -24,6 +24,7 @@ export default function TaskForm({ addTaskToLocalStorage }) {
                 type="text"
                 className="input borders"
                 value={value.task}
+                name="task"
                 onChange={handleChange}
             />
             
