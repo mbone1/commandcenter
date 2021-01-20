@@ -1,57 +1,69 @@
 import React, { useState } from "react";
 
-const colorPref = () => {
-  if (JSON.parse(localStorage.getItem("colorpref")) === null) {
-    return "white";
-  } else {
-    return JSON.parse(localStorage.getItem("colorpref"));
-  }
-};
 
-export default function ColorControls() {
+
+export default function ColorControls(props) {
    
-    const [color, setColor] = useState(colorPref);
-    //allows colors to be passed in to change class
-    const classes = `container theme-${color}`;
-    //allows color to persist after refresh/shutdown
-    localStorage.setItem("colorpref", JSON.stringify(color));
-
-
-
-    
+  function handleChange(event) {
+    props.onChange(event.target.value)
+  }
     return (
       <div className="ten borders hov holder">
         <button
           className="cButton white"
           name="color"
-          onClick={() => setColor("white")}></button>
+          value="white"
+          onClick={handleChange}></button>
         <button
           className="cButton yellow"
-          onClick={() => setColor("yellow")}></button>
+          name="color"
+          value="yellow"
+          onClick={handleChange}></button>
         <button
           className="cButton orange"
-          onClick={() => setColor("orange")}></button>
+          name="color"
+          value="orange"
+          onClick={handleChange}></button>
         <button
           className="cButton red"
-          onClick={() => setColor("red")}></button>
+          name="color"
+          value="red"
+          onClick={handleChange}></button>
         <button
           className="cButton pink"
-          onClick={() => setColor("pink")}></button>
+          name="color"
+          value="pink"
+          onClick={handleChange}></button>
         <button
           className="cButton purple"
-          onClick={() => setColor("purple")}></button>
+          name="color"
+          value="purple"
+          onClick={handleChange}></button>
         <button
           className="cButton blue"
-          onClick={() => setColor("blue")}></button>
+          name="color"
+          value="blue"
+          onClick={handleChange}></button>
         <button
           className="cButton turquoise"
-          onClick={() => setColor("turquine")}></button>
+          name="color"
+          value="turquine"
+          onClick={handleChange}></button>
         <button
           className="cButton green"
-          onClick={() => setColor("green")}></button>
+          name="color"
+          value="green"
+          onClick={handleChange}></button>
         <button
           className="cButton lightblue"
-          onClick={() => setColor("rainbow")}></button>
+          name="color"
+          value="rainbow"
+          onClick={handleChange}></button>
+        
       </div>
-    );
+);
 }
+
+
+
+    

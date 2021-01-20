@@ -14,7 +14,6 @@ const defaultTask = [{
     isFocused: true
   }]
 
-const startCount = 0
 
 export default function Tasker() {
   const [tasks, setTasks] = useState({});
