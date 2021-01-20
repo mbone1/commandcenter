@@ -15,7 +15,7 @@ export default function TaskForm({ addTaskToLocalStorage }) {
         e.preventDefault();
         if (!value) return;
         addTaskToLocalStorage(value)
-        setValue("");
+        setValue({task: ""});
     }
 
 
