@@ -95,8 +95,9 @@ export default function Tasker() {
             {task[index]}
           </Task>
         ))}
+        <TaskForm addTaskToLocalStorage={addTaskToLocalStorage}/>
         
-          <TaskForm addTaskToLocalStorage={addTaskToLocalStorage} />
+        
     </div>
 )
 

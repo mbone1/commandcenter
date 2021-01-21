@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../stylesheets/tasker.scss'
 
 export default function TaskForm({ addTaskToLocalStorage }) {
     const [value, setValue] = useState("");
@@ -18,16 +19,21 @@ export default function TaskForm({ addTaskToLocalStorage }) {
         setValue({task: ""});
     }
 
+    const count = localStorage.getItem('count')
+
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form
+            className="borders"
+            onSubmit={handleSubmit}>
             <input
                 type="text"
-                className="input borders"
+                className="input borders form"
                 value={value.task}
                 name="task"
                 onChange={handleChange}
             />
+            <p>{count}</p>
             
         </form>
     )

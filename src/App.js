@@ -19,7 +19,6 @@ import Age from './components/memento/age'
 import Adder from './components/playlist/adder'
 import React, { useState } from "react";
 
-
 const colorPref = () => {
   if (JSON.parse(localStorage.getItem('colorpref')) === null) {
     return ("white")

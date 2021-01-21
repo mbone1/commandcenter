@@ -1,9 +1,10 @@
         .tasks {
             font-family: 'Quantico', sans-serif;
-            height: 400px;
+            max-height: 400px;
             margin-top: 10px;
             padding: 5px;
             text-transform: uppercase;
+            overflow-y: auto;
         }
         
         .task {
@@ -20,4 +21,14 @@
             font-size: 8px;
             border: 0;
             text-transform: uppercase;
+        }
+        
+        .form {
+            background-color: var(--tileBackground);
+            font-family: 'Quantico', sans-serif;
+            text-transform: uppercase;
+        }
+        
+        .form:focus {
+            outline: none;
         }
