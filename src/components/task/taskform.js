@@ -23,18 +23,20 @@ export default function TaskForm({ addTaskToLocalStorage }) {
 
 
     return (
-        <form
-            className="borders"
-            onSubmit={handleSubmit}>
-            <input
-                type="text"
-                className="input borders form"
-                value={value.task}
-                name="task"
-                onChange={handleChange}
-            />
-            <p>{count}</p>
-            
-        </form>
-    )
+      <div className="formBox">
+        <form className="borders" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="input borders form"
+            value={value.task}
+            name="task"
+            onChange={handleChange}
+          />
+          <div className="alignRight borders">
+            <span>Tasks Completed </span>
+            <span>{count}</span>
+          </div>
+      </form>
+        </div>
+    );
 }

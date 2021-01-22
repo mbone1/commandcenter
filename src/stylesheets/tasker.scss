@@ -27,8 +27,25 @@
             background-color: var(--tileBackground);
             font-family: 'Quantico', sans-serif;
             text-transform: uppercase;
+            width: 200px;
         }
         
         .form:focus {
             outline: none;
+        }
+        
+        .alignRight {
+            align-self: right;
+            text-align: center;
+            max-width: 100px;
+        }
+        
+        .formBox {
+            // position: absolute;
+            // margin-bottom: 
+        }
+        
+        .taskbox {
+            max-height: 270px;
+            overflow-y: auto;
         }

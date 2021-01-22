@@ -83,23 +83,23 @@ export default function Tasker() {
  
 
     return (
-    <div className="tasks four hov borders">
-        {taskChecker().map((task, index) => (
-          <Task
-            key={index}
-            index={index}
-            task={task}
-            removeTaskFromLocalStorage={removeTaskFromLocalStorage}
-            focusTask={focusTask}
-            unFocusTask={unFocusTask}>
-            {task[index]}
-          </Task>
-        ))}
-        <TaskForm addTaskToLocalStorage={addTaskToLocalStorage}/>
-        
-        
-    </div>
-)
+      <div className="tasks four hov borders">
+        <div className="borders taskbox">
+          {taskChecker().map((task, index) => (
+            <Task
+              key={index}
+              index={index}
+              task={task}
+              removeTaskFromLocalStorage={removeTaskFromLocalStorage}
+              focusTask={focusTask}
+              unFocusTask={unFocusTask}>
+              {task[index]}
+            </Task>
+          ))}
+        </div>
+        <TaskForm addTaskToLocalStorage={addTaskToLocalStorage} />
+      </div>
+    );
 
 
     

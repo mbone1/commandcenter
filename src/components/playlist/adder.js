@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 export default function Adder() {
   const [video, setVideo] = useState({})
-  const yes = ">"
   const handleChange = (e) => {
     //changes the value of video object to values entered in fields
     const { name, value } = e.target;
@@ -17,7 +16,9 @@ export default function Adder() {
     e.preventDefault();
     if (!video) return;
     saveToLocalStorage(video)
-    setVideo("")
+    setVideo({
+      Name: "",
+      SRC: ""})
   }
   //function below saves to storage
   const saveToLocalStorage = (data) => {
@@ -33,7 +34,6 @@ export default function Adder() {
   return (
     <div>
       <form>
-        <label>Name{yes}</label>
         <input type="text" name="Name" value={video.name} onChange={handleChange}></input>
         <br></br>
         <label>URL</label>
