@@ -8,6 +8,10 @@
         }
         
         .task {
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+            margin-top: 15px !important;
+            width: 375px;
             padding: 5px;
         }
         
@@ -30,7 +34,8 @@
             width: 200px;
             position: relative;
             float: left;
-            margin: 20px;
+            margin: 30px !important;
+            margin-top: 30px !important;
         }
         
         .form:focus {
@@ -41,12 +46,15 @@
             text-align: center;
             max-width: 100px;
             float: right;
+            margin-right: 20px;
         }
         
-        .formBox {}
+        .formBox {
+            max-height: 80px !important;
+        }
         
         .taskbox {
-            max-height: 300px;
+            height: 320px;
             overflow-y: auto;
             margin-top: -10px !important;
         }
