@@ -35,7 +35,6 @@ export default function Adder() {
     <div>
       <form className="borders formAdder">
         <label className="">NAME </label>
-
         <input
           type="text"
           name="Name"
@@ -44,7 +43,6 @@ export default function Adder() {
           onChange={handleChange}></input>
         <br></br>
         <label>&nbsp;&nbsp;URL &nbsp;&nbsp;</label>
-
         <input
           type="text"
           name="SRC"
@@ -52,13 +50,15 @@ export default function Adder() {
           value={video.value}
           onChange={handleChange}></input>
         <br></br>
-        <button className="invert" type="submit" onClick={handleSubmit}>
+        <button className="invert submitbutton" type="submit" onClick={handleSubmit}>
           Submit
         </button>
       </form>
     </div>
   );
 }
+
+
   
 
       
