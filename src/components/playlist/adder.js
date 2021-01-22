@@ -34,23 +34,27 @@ export default function Adder() {
   return (
     <div>
       <form className="borders formAdder">
-        <label className="">NAME</label>
-        <br></br>
+        <label className="">NAME </label>
+
         <input
           type="text"
           name="Name"
+          className="borders"
           value={video.name}
           onChange={handleChange}></input>
         <br></br>
-        <label>URL</label>
-        <br></br>
+        <label>&nbsp;&nbsp;URL &nbsp;&nbsp;</label>
+
         <input
           type="text"
           name="SRC"
+          className="borders"
           value={video.value}
           onChange={handleChange}></input>
         <br></br>
-        <button type="submit" onClick={handleSubmit}></button>
+        <button className="invert" type="submit" onClick={handleSubmit}>
+          Submit
+        </button>
       </form>
     </div>
   );
