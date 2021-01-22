@@ -23,6 +23,13 @@
             background-color: $swapper;
             width: 7px;
         }
+        .taskbox::-webkit-scrollbar {
+            width: 7px;
+        }
+        .taskbox::-webkit-scrollbar-thumb {
+            background-color: $swapper;
+            width: 7px;
+        }
         //button animations
         .invert:hover {
             color: var(--background);

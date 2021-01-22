@@ -16,7 +16,7 @@ export default function Task({ task, index, removeTaskFromLocalStorage, focusTas
                     unfocus
         </button>
                 <button className="taskButton invert" onClick={() => removeTaskFromLocalStorage(index)}>
-                    Delete
+                    Complete
         </button>
             </div>
         </div>

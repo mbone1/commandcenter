@@ -1,8 +1,8 @@
         .tasks {
             font-family: 'Quantico', sans-serif;
             max-height: 400px;
-            margin-top: 10px;
-            padding: 5px;
+            margin-top: 5px;
+            padding: 0px !important;
             text-transform: uppercase;
             overflow-y: auto;
         }
@@ -28,6 +28,9 @@
             font-family: 'Quantico', sans-serif;
             text-transform: uppercase;
             width: 200px;
+            position: relative;
+            float: left;
+            margin: 20px;
         }
         
         .form:focus {
@@ -35,17 +38,15 @@
         }
         
         .alignRight {
-            align-self: right;
             text-align: center;
             max-width: 100px;
+            float: right;
         }
         
-        .formBox {
-            // position: absolute;
-            // margin-bottom: 
-        }
+        .formBox {}
         
         .taskbox {
-            max-height: 270px;
+            max-height: 300px;
             overflow-y: auto;
+            margin-top: -10px !important;
         }
