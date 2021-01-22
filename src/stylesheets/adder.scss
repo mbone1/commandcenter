@@ -1,0 +1,36 @@
+.formAdder {
+    background-color: var(--tileBackground);
+    font-family: 'Quantico', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    width: 300px;
+    // margin: 0 auto !important;
+    float: left;
+    margin-top: 3px !important // position: relative;
+    // margin: 30px !important;
+    // margin-top: 30px !important;
+}
+
+.formAdder:hover {
+    width: 330px;
+    margin: 0 auto !important;
+    transition: 1s ease-in;
+    // float: none !important;
+}
+
+label {
+    font-size: 7px;
+}
+
+label:hover {
+    font-size: 10px
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    background-color: var(--tileBackground);
+    font-family: 'Quantico', sans-serif;
+}

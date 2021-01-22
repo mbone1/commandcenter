@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import '../../stylesheets/adder.scss'
 
 export default function Adder() {
   const [video, setVideo] = useState({})
@@ -33,11 +33,23 @@ export default function Adder() {
   }
   return (
     <div>
-      <form>
-        <input type="text" name="Name" value={video.name} onChange={handleChange}></input>
+      <form className="borders formAdder">
+        <label className="">NAME</label>
+        <br></br>
+        <input
+          type="text"
+          name="Name"
+          value={video.name}
+          onChange={handleChange}></input>
         <br></br>
         <label>URL</label>
-        <input type="text" name="SRC" value={video.value} onChange={handleChange}></input>
+        <br></br>
+        <input
+          type="text"
+          name="SRC"
+          value={video.value}
+          onChange={handleChange}></input>
+        <br></br>
         <button type="submit" onClick={handleSubmit}></button>
       </form>
     </div>
