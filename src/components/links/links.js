@@ -1,7 +1,14 @@
+import '../../stylesheets/links.scss'
+
+
 let linkList = [
     {
         SRC: "https://github.com/mbone1",
         Name: "GitHub"
+    },
+    {
+        SRC: "https://www.w3schools.com/",
+        Name: "w3schools"
     }
 ]
 
@@ -20,13 +27,18 @@ export default function Links() {
     const listLinks = linkList.map((link) => (
         <>
             <button
-                class="link"
+                class="link links-button invert"
                 key={link.Name}
                 content={link.Name}
                 onClick={() => openInNewTab(link.SRC)}>{link.Name}</button>
+            <br></br>
             </>
     ))
 
 
-    return (<div className="nine borders hov">{listLinks}</div>)
+    return (
+        <div className="nine borders hov links-holder">
+            <div>{listLinks}</div>
+        
+        </div>)
 }
