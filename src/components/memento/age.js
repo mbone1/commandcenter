@@ -24,7 +24,7 @@ export default function Age() {
     //     minutes: Math.floor((difference / 1000 / 60) % 60),
     //     // seconds: Math.floor((difference / 1000) % 60),
     return (<>
-        <p>{rawAge} seconds</p>
+        {/* <p>{rawAge} seconds</p>
         <p>{minutes} minutes</p>
         <p>{hours} hours</p>
         
@@ -32,7 +32,7 @@ export default function Age() {
         <p>{ageInHours} Hours</p>
         <img className="borders" width="10px" src={one}height={hello}/>
         
-        
+         */}
     
     </>)
 }

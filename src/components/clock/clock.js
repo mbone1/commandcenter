@@ -1,9 +1,15 @@
-
-
 import React, { useState, useEffect } from "react";
+import '../../stylesheets/clock.scss'
 
 export default function Clock() {
-   const [date, setDate] = useState('')
+  const [date, setDate] = useState('')
+  let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
    
   useEffect(() => {
     var timerID = setInterval(() => tick(), 1000);
@@ -16,6 +22,11 @@ export default function Clock() {
     }
 
     return (
-        
-        <div className="eight borders hov clock">{date.toLocaleString()}</div>)
+      <div className='eight borders timecontainer'>
+        <br></br>
+        <div className="hov time">{date.toLocaleTimeString('en-GB')}</div>
+       
+        <div className="hov borders date">{date.toLocaleDateString('en-US', options)}</div>
+        </div>)
 }
+

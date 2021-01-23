@@ -61,10 +61,9 @@ export default function Mori() {
     
   return (
     <div>
-          <h1>MEMENTO MORI</h1>
+          {/* <h1>MEMENTO MORI</h1>
 
        
-          {/* <p>2022 - {components}</p> */}
           <p>2022 - {timerComponents}</p>
           <p>2023 - {timerComponents}</p>
           <p>2024 - {timerComponents}</p>
@@ -73,7 +72,7 @@ export default function Mori() {
           <p>2040 - {timerComponents}</p>
           <p>2050 - {timerComponents}</p>
           <p>2060 - {timerComponents}</p>
-      <p>2070 - {timerComponents}</p>
+      <p>2070 - {timerComponents}</p> */}
     </div>
   );
 }
