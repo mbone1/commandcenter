@@ -6,15 +6,24 @@ let linkList = [
 ]
 
 
+const openInNewTab = (url) => {
+  const newWindow = window.open(
+    url,
+    "_blank",
+    "noopener,noreferrer,fullscreen=no"
+  );
+  if (newWindow) newWindow.opener = null;
+};
+
 
 export default function Links() {
     const listLinks = linkList.map((link) => (
         <>
-            <a
+            <button
                 class="link"
                 key={link.Name}
                 content={link.Name}
-                href={link.SRC}> {link.Name}</a>
+                onClick={() => openInNewTab(link.SRC)}>{link.Name}</button>
             </>
     ))
 
