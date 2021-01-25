@@ -5,7 +5,11 @@ import { DateTime } from 'luxon';
 
 export default function Clock() {
   const [date, setDate] = useState(new Date())
-  let local = DateTime.local()
+  const [timezone, setTimeZone] = useState()
+  let localTime = DateTime.local().toLocaleString(DateTime.TIME_WITH_SECONDS);
+  let localDate = DateTime.local().toLocaleString(DateTime.DATE_HUGE);
+  let psTime = DateTime.local().setZone('America/Los_Angeles').toLocaleString(DateTime.TIME_WITH_SECONDS)
+  let psDate = DateTime.local().setZone('America/Los_Angeles').toLocaleString(DateTime.DATE_HUGE)
 
   useEffect(() => {
     let timerID = setInterval(() => tick(), 1000);
@@ -21,11 +25,11 @@ export default function Clock() {
       <div className="eight borders timecontainer">
         <br></br>
         <div className="hov time">
-          {local.toLocaleString(DateTime.TIME_WITH_SECONDS)}
+          {localTime}
         </div>
 
         <div className="hov borders date">
-          {local.toLocaleString(DateTime.DATE_HUGE)}
+          {localDate}
         </div>
       </div>
     );
