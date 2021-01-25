@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
 import '../../stylesheets/clock.scss'
+import { DateTime } from 'luxon';
+
 
 export default function Clock() {
   const [date, setDate] = useState(new Date())
-  let options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
+  let local = DateTime.local()
 
-   
   useEffect(() => {
-    var timerID = setInterval(() => tick(), 1000);
+    let timerID = setInterval(() => tick(), 1000);
     return function cleanup() {
       clearInterval(timerID);
     };
@@ -22,11 +18,19 @@ export default function Clock() {
     }
 
     return (
-      <div className='eight borders timecontainer'>
+      <div className="eight borders timecontainer">
         <br></br>
-        <div className="hov time">{date.toLocaleTimeString('en-US')}</div>
-       
-        <div className="hov borders date">{date.toLocaleDateString('en-US', options)}</div>
-        </div>)
+        <div className="hov time">
+          {local.toLocaleString(DateTime.TIME_WITH_SECONDS)}
+        </div>
+
+        <div className="hov borders date">
+          {local.toLocaleString(DateTime.DATE_HUGE)}
+        </div>
+      </div>
+    );
+
+   
+
 }
 
