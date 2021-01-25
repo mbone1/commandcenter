@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../../stylesheets/clock.scss'
 
 export default function Clock() {
-  const [date, setDate] = useState('')
+  const [date, setDate] = useState(new Date())
   let options = {
     weekday: "long",
     year: "numeric",
@@ -24,7 +24,7 @@ export default function Clock() {
     return (
       <div className='eight borders timecontainer'>
         <br></br>
-        <div className="hov time">{date.toLocaleTimeString('en-GB')}</div>
+        <div className="hov time">{date.toLocaleTimeString('en-US')}</div>
        
         <div className="hov borders date">{date.toLocaleDateString('en-US', options)}</div>
         </div>)
