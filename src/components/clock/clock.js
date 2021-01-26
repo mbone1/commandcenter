@@ -59,30 +59,30 @@ export default function Clock() {
   let la = 'America/Los_Angeles'
   let decider = dateState ? {phoenix} : {la}
 
-  // useEffect(() => {
-  //   let timerID = setInterval(() => tick(), 1000);
-  //   return function cleanup() {
-  //     clearInterval(timerID);
-  //   };
-  // });
-  //   function tick() {
-  //     setDate(new Date());
-  //   }
+  useEffect(() => {
+    let timerID = setInterval(() => tick(), 1000);
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+    function tick() {
+      setDate(new Date());
+    }
 
     return (
       <div className="eight borders timecontainer">
         <br></br>
         <div className="hov time">
-          {dateState ? <>{local.time}</> : <>{ps.time}</>}
-          {/* {DateTime.local()
+          {/* {dateState ? <>{local.time}</> : <>{ps.time}</>} */}
+          {DateTime.local()
             .setZone(location)
-    .toLocaleString(DateTime.TIME_WITH_SECONDS)} */}
+    .toLocaleString(DateTime.TIME_WITH_SECONDS)}
         </div>
 
         <div className="hov borders date">
           {dateState ? <>{local.date}</> : <>{ps.date}</>}
         </div>
-        <button onClick={setSpongus("tingus")}>{spongus}</button>
+        <button onClick={() => setLocation(la)}>{spongus}</button>
       </div>
     );
 
