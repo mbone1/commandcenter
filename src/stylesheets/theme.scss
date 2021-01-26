@@ -40,6 +40,10 @@
             color: var(--background);
             outline: none;
         }
+        .invertConst {
+            background-color: $swapper;
+            color: var(--background);
+        }
     }
 }
 
