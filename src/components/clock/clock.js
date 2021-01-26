@@ -2,62 +2,17 @@ import React, { useState, useEffect } from "react";
 import '../../stylesheets/clock.scss'
 import { DateTime } from 'luxon';
 
+let local;
+let losAngeles = 'America/Los_Angeles'
+let phoenix = 'America/Phoenix'
+let newYork = 'America/New_York'
+let utc = "utc"
 
 
 export default function Clock() {
-  let local = {
-    time: DateTime.local()
-    .toLocaleString(DateTime.TIME_WITH_SECONDS),
-    date: DateTime.local()
-    .toLocaleString(DateTime.DATE_HUGE)
-  }
-  let ps = {
-    time: DateTime.local()
-    .setZone("America/Los_Angeles")
-    .toLocaleString(DateTime.TIME_WITH_SECONDS),
-    date: DateTime.local()
-    .setZone("America/Los_Angeles")
-    .toLocaleString(DateTime.DATE_HUGE),
-  };
-  const [date, setDate] = useState()
-  const [dateState, setDateState] = useState(false)
-  const [location, setLocation] = useState('America/Phoenix');
-  const [spongus, setSpongus] = useState("spongus")
 
-  // function display() {
-  //   if (active === true) {
-  //     display === local;
-  //    return display
-  //   } else {
-  //       display === ps
-  //    return display 
-  //   }
-  // }
-  // function switcher(zone) {
-  //   if (zone === "local")
-  //   {
-  //     let active = local
-  //     return active
-  //     console.log(active)
-  //   }
-  //   else if (zone === "pst")
-  //   {
-  //     let active = ps
-  //   return active}
-  //   else {
-  //     let active = local
-  //     return active
-  //   }
-    
-  // }
-  // switcher("local")
-  // console.log(switcher("local"))
-  // function handleClick() {
-  //   setDateState(false)
-  // }
-  let phoenix = 'America/Phoenix'
-  let la = 'America/Los_Angeles'
-  let decider = dateState ? {phoenix} : {la}
+  const [date, setDate] = useState()
+  const [location, setLocation] = useState(local);
 
   useEffect(() => {
     let timerID = setInterval(() => tick(), 1000);
@@ -73,16 +28,21 @@ export default function Clock() {
       <div className="eight borders timecontainer">
         <br></br>
         <div className="hov time">
-          {/* {dateState ? <>{local.time}</> : <>{ps.time}</>} */}
           {DateTime.local()
             .setZone(location)
-    .toLocaleString(DateTime.TIME_WITH_SECONDS)}
+            .toLocaleString(DateTime.TIME_WITH_SECONDS)}
         </div>
 
-        <div className="hov borders date">
-          {dateState ? <>{local.date}</> : <>{ps.date}</>}
+        <div className="hov date">
+          {DateTime.local()
+            .setZone(location)
+            .toLocaleString(DateTime.DATE_HUGE)}
+        <button className='loc-button invert borders' onClick={() => setLocation(local)}>local</button>
+        <button className='loc-button invert borders' onClick={() => setLocation(losAngeles)}>pst</button>
+        <button className='loc-button invert borders' onClick={() => setLocation(phoenix)}>mst</button>
+        <button className='loc-button invert borders' onClick={() => setLocation(utc)}>utc</button>
+        <button className='loc-button invert borders' onClick={() => setLocation(newYork)}>est</button>
         </div>
-        <button onClick={() => setLocation(la)}>{spongus}</button>
       </div>
     );
 
