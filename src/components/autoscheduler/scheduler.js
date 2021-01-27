@@ -2,6 +2,32 @@ import { DateTime, Duration } from "luxon";
 import React, { useState, useEffect } from "react";
 import '../../stylesheets/autoscheduler.scss'
 import '../../stylesheets/clock.scss'
+import Task from "../task/task";
+
+const defaultTask = [
+  {
+    task: "get things done",
+    isFocused: true,
+  },
+];
+
+const taskChecker = () => {
+  if (JSON.parse(localStorage.getItem("tasks")) === null) {
+    return defaultTask;
+  } else {
+    return JSON.parse(localStorage.getItem("tasks"));
+  }
+};
+
+const tasks1 = taskChecker().map((task) => (
+  
+    <div className="borders">
+      <span class="options invert" key={task.task}>
+        {task.task}
+      </span>
+    </div>
+
+));
 
 
 export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
@@ -44,10 +70,15 @@ const [date, setDate] = useState();
             <button className="shift-button invert borders">regular 4</button>
           </div>
         </div>
-        <div className="borders timeBlock">
+        <div className="borders timeBlock schedulerTaskBox">
           <span>select tasks</span>
-         
+      {tasks1}
         </div>
+        <div className="borders timeBlock schedulerTaskBox">
+        
+      {tasks1}
+        </div>
+         
         <div className="borders timeBlock">
           <span className="options">Current Shift Start : {startTime}</span>
           <br></br>

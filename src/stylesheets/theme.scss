@@ -30,6 +30,13 @@
             background-color: $swapper;
             width: 7px;
         }
+        .schedulerTaskBox::-webkit-scrollbar {
+            width: 7px;
+        }
+        .schedulerTaskBox::-webkit-scrollbar-thumb {
+            background-color: $swapper;
+            width: 7px;
+        }
         //button animations
         .invert:hover {
             color: var(--background);
