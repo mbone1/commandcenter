@@ -42,47 +42,6 @@ export default function Clock() {
             .toLocaleString(DateTime.DATE_HUGE)}
           {timeZoneButtons}
          
-          
-          {/* <button
-            className="loc-button invert borders"
-            onClick={() => setLocation(local)}>
-            local
-          </button>
-          <button
-            className="loc-button invert borders"
-            onClick={() => setLocation(losAngeles)}>
-            pst
-          </button>
-          <button
-            className="loc-button invert borders"
-            onClick={() => setLocation(phoenix)}>
-            mst
-          </button>
-          <button
-            className="loc-button invert borders"
-            onClick={() => setLocation(cst)}>
-            cst
-          </button>
-          <button
-            className="loc-button invert borders"
-            onClick={() => setLocation(cancun)}>
-            est
-          </button>
-          <button
-            className="loc-button invert borders"
-            onClick={() => setLocation(lisbon)}>
-            lisbon
-          </button>
-          <button
-            className="loc-button invert borders"
-            onClick={() => setLocation(berlin)}>
-            berlin
-          </button>
-          <button
-            className="loc-button invert borders"
-            onClick={() => setLocation(utc)}>
-            utc
-          </button> */}
         </div>
       </div>
     );

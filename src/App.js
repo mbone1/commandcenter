@@ -6,6 +6,7 @@ import '../src/stylesheets/bot.scss'
 import '../src/stylesheets/controlpanel.scss'
 import '../src/stylesheets/theme.scss'
 import Jukebox from './components/playlist/jukebox'
+import Adder from './components/playlist/adder'
 import Art from './components/art/art'
 import Floaters from './components/art/floaters'
 import Links from './components/links/links'
@@ -16,7 +17,7 @@ import Clock from './components/clock/clock'
 import ColorControls from './components/controlpanel/colorcontrols'
 import Mori from './components/memento/mori'
 import Age from './components/memento/age'
-import Adder from './components/playlist/adder'
+import AutoScheduler from './components/autoscheduler/scheduler'
 import React, { useState } from "react";
 
 const colorPref = () => {
@@ -46,7 +47,8 @@ export default function App() {
         <Pomodoro />
         <Tasker />
         <div className="five toprow borders hov">
-          <Mori /> <Age />
+          {/* <Mori /> <Age /> */}
+          <AutoScheduler />
         </div>
         <Bot />
         <div className="seven borders hov"><Art/></div>
