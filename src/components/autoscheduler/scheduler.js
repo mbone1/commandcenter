@@ -8,6 +8,12 @@ const defaultTask = [
   {
     task: "get things done",
     isFocused: true,
+    isSelected: true,
+  },
+  {
+    task: "do not get things done",
+    isFocused: true,
+    isSelected: false,
   },
 ];
 
@@ -27,6 +33,21 @@ const tasks1 = taskChecker().map((task) => (
     </button>
   </div>
 ));
+
+const selectedTasks = defaultTask
+  .filter((task) => task.isSelected)
+  .map((selectedTask) => (
+    <>
+      <div className="options">
+        <button className="borders task-button" key={selectedTask.task}>
+          {selectedTask.task}
+          <br></br>
+          <button className="invert borders subtask-button">remove</button>
+        </button>
+      </div>
+    </>
+  ));
+    console.log(selectedTasks) 
 
 
 export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
@@ -79,6 +100,7 @@ const [date, setDate] = useState();
         </div>
         <div className="borders timeBlock schedulerTaskBox">
           <span>tasks selected</span>
+          {selectedTasks}
         </div>
 
         <div className="borders timeBlock">
@@ -89,6 +111,19 @@ const [date, setDate] = useState();
           <span className="options">Current Shift End : {endTime}</span>
           <br></br>
           <button className="shift-button invert borders">begin</button>
+        </div>
+        <div className="borders pyramidHolder">
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          
         </div>
         <br></br>
         <br></br>
