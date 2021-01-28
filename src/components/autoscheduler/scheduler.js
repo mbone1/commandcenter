@@ -20,13 +20,12 @@ const taskChecker = () => {
 };
 
 const tasks1 = taskChecker().map((task) => (
-  
-    <div className="borders">
-      <span class="options invert" key={task.task}>
-        {task.task}
-      </span>
-    </div>
-
+  <div className="options">
+    <button className="borders task-button" key={task.task}>
+      {task.task}<br></br>
+      <button className="invert borders subtask-button">add</button>
+    </button>
+  </div>
 ));
 
 
@@ -51,12 +50,7 @@ const [date, setDate] = useState();
         <div className="borders timeBlock title invertConst">
           AUTO-SCHEDULER
         </div>
-        <div className="borders timeBlock">
-          <span>custom shift</span>
-          <br></br>
-          <button className="shift-button invert borders">create</button>
-          <br></br>
-        </div>
+
         <div className="borders timeBlock selectorBox">
           <span className="selectorText"> premade shifts</span>
           <br></br>
@@ -69,16 +63,24 @@ const [date, setDate] = useState();
             <button className="shift-button invert borders">regular 6</button>
             <button className="shift-button invert borders">regular 4</button>
           </div>
+          <hr></hr>
+          <span className="shift-title">custom shift</span>
+          <br></br>
+          <button className="shift-button invert borders">create</button>
+          <br></br>
+        </div>
+        <div className="borders timeBlock">
+          <div className="task-title borders invertConst">
+            select tasks for shift
+          </div>
+          <div className="borders">
+            <div className="schedulerTaskBox">{tasks1}</div>
+          </div>
         </div>
         <div className="borders timeBlock schedulerTaskBox">
-          <span>select tasks</span>
-      {tasks1}
+          <span>tasks selected</span>
         </div>
-        <div className="borders timeBlock schedulerTaskBox">
-        
-      {tasks1}
-        </div>
-         
+
         <div className="borders timeBlock">
           <span className="options">Current Shift Start : {startTime}</span>
           <br></br>
@@ -86,26 +88,11 @@ const [date, setDate] = useState();
           <br></br>
           <span className="options">Current Shift End : {endTime}</span>
           <br></br>
-            <button className="shift-button invert borders">begin</button>
+          <button className="shift-button invert borders">begin</button>
         </div>
-          <br></br>
-          <br></br>
-          <br></br>
-
-     
-        <div className="borders timeBlock">
-          each block of time will be stored within a bordered div like this
-        </div>
-        <div className="borders timeBlock">
-          each block will display a begin time and end time
-        </div>
-        <div className="borders invertConst timeBlock">
-          the current block of time will be inverted
-        </div>
-        <div className="borders timeBlock">
-          each block will contain a task. much like tasker they will have a
-          complete option
-        </div>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
 
       //form should - prompt then return relevant info...

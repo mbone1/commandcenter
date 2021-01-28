@@ -32,8 +32,40 @@
     // grid-gap: 0
 }
 
+.shift-title {
+    font-size: 15px;
+}
+
 .selectorText {
     font-size: 15px
+}
+
+.task-title {
+    text-align: center;
+    margin: auto;
+    margin-top: 0 !important;
+}
+
+.task-button {
+    width: 99%;
+    background: var(--tileBackground);
+    font-family: 'Quantico', sans-serif;
+    font-size: 10px;
+    border: 0;
+    padding: 0;
+    text-transform: uppercase;
+    // margin: 0 !important;
+}
+
+.subtask-button {
+    width: 25%;
+    background: var(--tileBackground);
+    font-family: 'Quantico', sans-serif;
+    font-size: 9px;
+    border: 0;
+    padding: 0;
+    text-transform: uppercase;
+    margin-top: -5px !important
 }
 
 .title {
@@ -41,5 +73,8 @@
 }
 
 .options {
-    font-size: 11px;
+    // align-content: left;
+    text-align: left;
+    font-size: 10px;
+    margin: auto;
 }
