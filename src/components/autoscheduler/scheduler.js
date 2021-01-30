@@ -28,25 +28,14 @@ const taskChecker = () => {
 
 
 
-const selectedTasks = defaultTask
-.filter((task) => task.isSelected)
-.map((selectedTask) => (
-  <>
-      <div className="options">
-        <button className="borders task-button" key={selectedTask.task}>
-          {selectedTask.task}
-          <br></br>
-          <button className="invert borders subtask-button">remove</button>
-        </button>
-      </div>
-    </>
-  ));
+
   
   
   export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
     const [date, setDate] = useState();
-    const [eselectedTasks, setSelectedTasks] = useState();
-    
+    const [selectedTasks, setSelectedTasks] = useState(defaultTask);
+    const [unSelectedTasks, setUnSelectedTasks] = useState();
+
     const selectTask = (index) => {
       let taskArray = [];
       taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -70,6 +59,43 @@ const selectedTasks = defaultTask
         </button>
       </div>
     ));
+
+
+
+const unSelectedTasksHolder = selectedTasks
+  .filter((task) => !task.isSelected)
+  .map((selectedTask, index) => (
+    <>
+      <div className="options">
+        <button
+          className="borders task-button"
+          key={selectedTask.task}
+          onClick={() => selectTask(index)}>
+          {selectedTask.task}
+          <br></br>
+          <button className="invert borders subtask-button">add</button>
+        </button>
+      </div>
+    </>
+  ));
+    
+const selectedTasksHolder = selectedTasks
+  .filter((task) => task.isSelected)
+  .map((selectedTask, index) => (
+    <>
+      <div className="options">
+        <button
+          className="borders task-button"
+          key={selectedTask.task}
+          onClick={() => unSelectTask(index)}>
+          {selectedTask.task}
+          <br></br>
+          <button className="invert borders subtask-button">remove</button>
+        </button>
+      </div>
+    </>
+  ));
+
     
     let startTime = DateTime.local().plus({ minutes: 5 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //start time will always be offset by 5 minutes
     let endTime = DateTime.local().plus({ hours: 6 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //will pass length into this to get end time, should convert to minutes?
@@ -119,12 +145,12 @@ const selectedTasks = defaultTask
             select tasks for shift
           </div>
           <div className="borders">
-            <div className="schedulerTaskBox">{tasks1}</div>
+            <div className="schedulerTaskBox">{unSelectedTasksHolder}</div>
           </div>
         </div>
         <div className="borders timeBlock schedulerTaskBox">
           <span>tasks selected</span>
-          {selectedTasks}
+          {selectedTasksHolder}
         </div>
 
         <div className="borders timeBlock">
