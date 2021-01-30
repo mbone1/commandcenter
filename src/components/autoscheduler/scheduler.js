@@ -25,6 +25,8 @@ const taskChecker = () => {
   }
 };
 
+
+
 const tasks1 = taskChecker().map((task) => (
   <div className="options">
     <button className="borders task-button" key={task.task}>
@@ -47,11 +49,25 @@ const selectedTasks = defaultTask
       </div>
     </>
   ));
-    console.log(selectedTasks) 
 
 
 export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
-const [date, setDate] = useState();
+  const [date, setDate] = useState();
+  const [selectedTasks, setSelectedTasks] = useState();
+  
+  const SelectTask = (index) => {
+    let taskArray = [];
+    taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+    taskArray[index].isSelected = true;
+    localStorage.setItem("tasks", JSON.stringify(taskArray));
+    setSelectedTasks(taskArray);
+  }
+ 
+
+
+const UnSelectTask = () => {
+
+}
 
     let startTime = DateTime.local().plus({ minutes: 5 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //start time will always be offset by 5 minutes
     let endTime = DateTime.local().plus({ hours: 6 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //will pass length into this to get end time, should convert to minutes?
