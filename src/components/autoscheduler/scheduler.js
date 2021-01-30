@@ -27,19 +27,11 @@ const taskChecker = () => {
 
 
 
-const tasks1 = taskChecker().map((task) => (
-  <div className="options">
-    <button className="borders task-button" key={task.task}>
-      {task.task}<br></br>
-      <button className="invert borders subtask-button">add</button>
-    </button>
-  </div>
-));
 
 const selectedTasks = defaultTask
-  .filter((task) => task.isSelected)
-  .map((selectedTask) => (
-    <>
+.filter((task) => task.isSelected)
+.map((selectedTask) => (
+  <>
       <div className="options">
         <button className="borders task-button" key={selectedTask.task}>
           {selectedTask.task}
@@ -49,44 +41,54 @@ const selectedTasks = defaultTask
       </div>
     </>
   ));
-
-
-export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
-  const [date, setDate] = useState();
-  const [eselectedTasks, setSelectedTasks] = useState();
   
-  const SelectTask = (index) => {
-    let taskArray = [];
-    taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
-    taskArray[index].isSelected = true;
-    localStorage.setItem("tasks", JSON.stringify(taskArray));
-    setSelectedTasks(taskArray);
-  }
-  const UnSelectTask = (index) => {
-    let taskArray = [];
-    taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
-    taskArray[index].isSelected = false;
-    localStorage.setItem("tasks", JSON.stringify(taskArray));
-    setSelectedTasks(taskArray);
-  }
- 
+  
+  export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
+    const [date, setDate] = useState();
+    const [eselectedTasks, setSelectedTasks] = useState();
+    
+    const selectTask = (index) => {
+      let taskArray = [];
+      taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+      taskArray[index].isSelected = true;
+      localStorage.setItem("tasks", JSON.stringify(taskArray));
+      setSelectedTasks(taskArray);
+    }
+    const unSelectTask = (index) => {
+      let taskArray = [];
+      taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+      taskArray[index].isSelected = false;
+      localStorage.setItem("tasks", JSON.stringify(taskArray));
+      setSelectedTasks(taskArray);
+    }
 
-
+    const tasks1 = taskChecker().map((task, index) => (
+      <div className="options">
+        <button className="borders task-button" key={task.task} onClick={()=> selectTask(index)}>
+          {task.task}<br></br>
+          <button className="invert borders subtask-button">add</button>
+        </button>
+      </div>
+    ));
+    
+    let startTime = DateTime.local().plus({ minutes: 5 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //start time will always be offset by 5 minutes
+    let endTime = DateTime.local().plus({ hours: 6 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //will pass length into this to get end time, should convert to minutes?
+    
+        useEffect(() => {
+          let timerID = setInterval(() => tick(), 1000);
+          return function cleanup() {
+            clearInterval(timerID);
+          };
+        });
+        function tick() {
+          setDate(new Date());
+        }
+    
+    
+    
     
 
 
-    let startTime = DateTime.local().plus({ minutes: 5 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //start time will always be offset by 5 minutes
-    let endTime = DateTime.local().plus({ hours: 6 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //will pass length into this to get end time, should convert to minutes?
-
-    useEffect(() => {
-      let timerID = setInterval(() => tick(), 1000);
-      return function cleanup() {
-        clearInterval(timerID);
-      };
-    });
-    function tick() {
-      setDate(new Date());
-    }
     
     return (
       <div className="timecontainer">
