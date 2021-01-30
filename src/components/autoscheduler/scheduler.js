@@ -33,7 +33,7 @@ const taskChecker = () => {
   
   export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
     const [date, setDate] = useState();
-    const [selectedTasks, setSelectedTasks] = useState(defaultTask);
+    const [selectedTasks, setSelectedTasks] = useState(taskChecker);
     const [unSelectedTasks, setUnSelectedTasks] = useState();
 
     const selectTask = (index) => {
@@ -70,10 +70,11 @@ const unSelectedTasksHolder = selectedTasks
         <button
           className="borders task-button"
           key={selectedTask.task}
-          onClick={() => selectTask(index)}>
+          >
           {selectedTask.task}
           <br></br>
-          <button className="invert borders subtask-button">add</button>
+          <button className="invert borders subtask-button"
+          onClick={() => selectTask(index)}>add</button>
         </button>
       </div>
     </>
@@ -84,13 +85,14 @@ const selectedTasksHolder = selectedTasks
   .map((selectedTask, index) => (
     <>
       <div className="options">
-        <button
-          className="borders task-button"
-          key={selectedTask.task}
-          onClick={() => unSelectTask(index)}>
+        <button className="borders task-button" key={selectedTask.task}>
           {selectedTask.task}
           <br></br>
-          <button className="invert borders subtask-button">remove</button>
+          <button
+            className="invert borders subtask-button"
+            onClick={() => unSelectTask(index)}>
+            remove
+          </button>
         </button>
       </div>
     </>
