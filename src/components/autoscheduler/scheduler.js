@@ -34,13 +34,14 @@ const taskChecker = () => {
   export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
     const [date, setDate] = useState();
     const [selectedTasks, setSelectedTasks] = useState(taskChecker);
-    const [unSelectedTasks, setUnSelectedTasks] = useState();
+    const [unSelectedTasks, setUnSelectedTasks] = useState(taskChecker);
 
     const selectTask = (index) => {
       let taskArray = [];
       taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
       taskArray[index].isSelected = true;
       localStorage.setItem("tasks", JSON.stringify(taskArray));
+      setSelectedTasks(taskArray);
       setSelectedTasks(taskArray);
     }
     const unSelectTask = (index) => {
@@ -49,6 +50,7 @@ const taskChecker = () => {
       taskArray[index].isSelected = false;
       localStorage.setItem("tasks", JSON.stringify(taskArray));
       setSelectedTasks(taskArray);
+      setUnSelectedTasks(taskArray);
     }
 
     const tasks1 = taskChecker().map((task, index) => (
@@ -62,26 +64,26 @@ const taskChecker = () => {
 
 
 
-const unSelectedTasksHolder = selectedTasks
-  .filter((task) => !task.isSelected)
-  .map((selectedTask, index) => (
+const unSelectedTasksHolder = unSelectedTasks
+  // .filter((task) => task.isSelected === false)
+  .map((unselectedTask, index) => (
     <>
       <div className="options">
         <button
           className="borders task-button"
-          key={selectedTask.task}
+          key={unselectedTask.task}
           >
-          {selectedTask.task}
+          {unselectedTask.task}
           <br></br>
           <button className="invert borders subtask-button"
-          onClick={() => selectTask(index)}>add</button>
+            onClick={() => selectTask(index)}>add { index }</button>
         </button>
       </div>
     </>
   ));
     
 const selectedTasksHolder = selectedTasks
-  .filter((task) => task.isSelected)
+  // .filter((task) => task.isSelected)
   .map((selectedTask, index) => (
     <>
       <div className="options">
@@ -91,7 +93,7 @@ const selectedTasksHolder = selectedTasks
           <button
             className="invert borders subtask-button"
             onClick={() => unSelectTask(index)}>
-            remove
+            remove {index}
           </button>
         </button>
       </div>
@@ -151,7 +153,7 @@ const selectedTasksHolder = selectedTasks
           </div>
         </div>
         <div className="borders timeBlock schedulerTaskBox">
-          <span>tasks selected</span>
+          <div className="task-title borders invertConst">tasks selected</div>
           {selectedTasksHolder}
         </div>
 
@@ -175,7 +177,6 @@ const selectedTasksHolder = selectedTasks
           <div className="borders block"></div>
           <div className="borders block"></div>
           <div className="borders block"></div>
-          
         </div>
         <br></br>
         <br></br>
