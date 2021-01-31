@@ -1,8 +1,8 @@
+import { construct } from "core-js/fn/reflect";
 import { DateTime, Duration } from "luxon";
 import React, { useState, useEffect } from "react";
 import '../../stylesheets/autoscheduler.scss'
 import '../../stylesheets/clock.scss'
-import Task from "../task/task";
 
 const defaultTask = [
   {
@@ -37,7 +37,7 @@ function littleSwitch(array, index) {
 
   
   
-  export default function AutoScheduler(length, breakLength, lunchLength, breakAmount) {
+  export default function AutoScheduler() {
     const [date, setDate] = useState();
     const [tasks, setTasks] = useState(taskChecker);
     // const [unSelectedTasks, setUnSelectedTasks] = useState(taskChecker);
@@ -86,10 +86,31 @@ const selectedTasksHolder = tasks
       </div>
     </>
   ));
+  let startTimeEXAMPLE = DateTime.local().plus({ minutes: 5 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //start time will always be offset by 5 minutes
+  let endTimeEXAMPLE = DateTime.local().plus({ hours: 6 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //will pass length into this to get end time, should convert to minutes?
 
+    const scheduleMaker = (startTime, endTime, lunchLength, breakAmount, selectedTasks) => {
+      const shiftLength = endTime - startTime;
+      let lunchStartTime = (shiftLength - (shiftLength/2)) - (lunchLength/2)
+      let totalBlocks = (shiftLength - lunchLength)
+      for (let i = 0; i < totalBlocks; i++) {
+        shift.push()
+      }
+      let shift = []
+    }
+        
+       
+    let exampleShift = [
+      {
+        startTime: "blockStart",
+        endTime: "blockEnd",
+        task: "selectedTasks[index]"
+
+      }
+    ]
+
+      
     
-    let startTime = DateTime.local().plus({ minutes: 5 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //start time will always be offset by 5 minutes
-    let endTime = DateTime.local().plus({ hours: 6 }).toLocaleString(DateTime.TIME_WITH_SECONDS) //will pass length into this to get end time, should convert to minutes?
     
         useEffect(() => {
           let timerID = setInterval(() => tick(), 1000);
@@ -145,11 +166,11 @@ const selectedTasksHolder = tasks
         </div>
 
         <div className="borders timeBlock">
-          <span className="options">Current Shift Start : {startTime}</span>
+          <span className="options">Current Shift Start : {startTimeEXAMPLE}</span>
           <br></br>
           <span className="options">Lunch : beginning to end </span>
           <br></br>
-          <span className="options">Current Shift End : {endTime}</span>
+          <span className="options">Current Shift End : {endTimeEXAMPLE}</span>
           <br></br>
           <button className="shift-button invert borders">begin</button>
         </div>
@@ -169,10 +190,6 @@ const selectedTasksHolder = tasks
         <br></br>
         <br></br>
       </div>
-
-      //form should - prompt then return relevant info...
-      //user prompts up top
-      //information compiled bottom
     );
     
 
