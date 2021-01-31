@@ -4,7 +4,12 @@
     text-align: center;
     grid-gap: 0;
     align-content: center;
-    padding: 2px
+    padding: 2px;
+    // height: 250px
+}
+
+.taskBlock {
+    height: 250px;
 }
 
 .shift-button {
@@ -70,6 +75,10 @@
 
 .title {
     font-size: 29px;
+}
+
+.hidden {
+    display: none;
 }
 
 .options {

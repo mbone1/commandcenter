@@ -26,54 +26,40 @@ const taskChecker = () => {
 };
 
 
-
+function littleSwitch(array, index) {
+   if (!!array[index].isSelected) {
+    return array[index].isSelected = false;
+   } else {
+     return array[index].isSelected = true;
+   }
+}
 
 
   
   
-  export default function AutoScheduler(length, tasks, breakLength, lunchLength, breakAmount) {
+  export default function AutoScheduler(length, breakLength, lunchLength, breakAmount) {
     const [date, setDate] = useState();
-    const [selectedTasks, setSelectedTasks] = useState(taskChecker);
-    const [unSelectedTasks, setUnSelectedTasks] = useState(taskChecker);
+    const [tasks, setTasks] = useState(taskChecker);
+    // const [unSelectedTasks, setUnSelectedTasks] = useState(taskChecker);
 
     const selectTask = (index) => {
       let taskArray = [];
       taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
-      taskArray[index].isSelected = true;
+      littleSwitch(taskArray, index)
       localStorage.setItem("tasks", JSON.stringify(taskArray));
-      setSelectedTasks(taskArray);
-      setSelectedTasks(taskArray);
+      setTasks(taskArray);
+      // setSelectedTasks(taskArray);
     }
-    const unSelectTask = (index) => {
-      let taskArray = [];
-      taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
-      taskArray[index].isSelected = false;
-      localStorage.setItem("tasks", JSON.stringify(taskArray));
-      setSelectedTasks(taskArray);
-      setUnSelectedTasks(taskArray);
-    }
-
-    const tasks1 = taskChecker().map((task, index) => (
-      <div className="options">
-        <button className="borders task-button" key={task.task} onClick={()=> selectTask(index)}>
-          {task.task}<br></br>
-          <button className="invert borders subtask-button">add</button>
-        </button>
-      </div>
-    ));
-
-
-
-const unSelectedTasksHolder = unSelectedTasks
-  // .filter((task) => task.isSelected === false)
-  .map((unselectedTask, index) => (
+    
+const unSelectedTasksHolder = tasks
+  .map((task, index) => (
     <>
       <div className="options">
         <button
-          className="borders task-button"
-          key={unselectedTask.task}
+          className={task.isSelected ? "borders task-button" : "hidden" }
+          key={task.task}
           >
-          {unselectedTask.task}
+          {task.task}
           <br></br>
           <button className="invert borders subtask-button"
             onClick={() => selectTask(index)}>add { index }</button>
@@ -82,17 +68,18 @@ const unSelectedTasksHolder = unSelectedTasks
     </>
   ));
     
-const selectedTasksHolder = selectedTasks
-  // .filter((task) => task.isSelected)
-  .map((selectedTask, index) => (
+const selectedTasksHolder = tasks
+  .map((task, index) => (
     <>
       <div className="options">
-        <button className="borders task-button" key={selectedTask.task}>
-          {selectedTask.task}
+        <button
+          className={!task.isSelected ? "borders task-button" : "hidden"}
+          key={task.task}>
+          {task.task}
           <br></br>
           <button
             className="invert borders subtask-button"
-            onClick={() => unSelectTask(index)}>
+            onClick={() => selectTask(index)}>
             remove {index}
           </button>
         </button>
@@ -144,7 +131,7 @@ const selectedTasksHolder = selectedTasks
           <button className="shift-button invert borders">create</button>
           <br></br>
         </div>
-        <div className="borders timeBlock">
+        <div className="borders timeBlock taskBlock">
           <div className="task-title borders invertConst">
             select tasks for shift
           </div>
@@ -152,7 +139,7 @@ const selectedTasksHolder = selectedTasks
             <div className="schedulerTaskBox">{unSelectedTasksHolder}</div>
           </div>
         </div>
-        <div className="borders timeBlock schedulerTaskBox">
+        <div className="borders timeBlock schedulerTaskBox taskBlock">
           <div className="task-title borders invertConst">tasks selected</div>
           {selectedTasksHolder}
         </div>
