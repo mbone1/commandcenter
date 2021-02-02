@@ -72,9 +72,9 @@ export default function AutoScheduler() {
   ) => {
     const shiftLength = endTime - startTime;
     let lunchStartTime = shiftLength - shiftLength / 2 - lunchLength / 2;
-    let totalBlocks = shiftLength - lunchLength;
     let shift = [];
   };
+        
 
   let exampleShift = [
     {

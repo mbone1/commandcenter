@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import '../../stylesheets/adder.scss'
 
-var colors = ['orange', 'red', 'yellow']
-
 export default function Adder() {
   const [video, setVideo] = useState({})
   const handleChange = (e) => {
