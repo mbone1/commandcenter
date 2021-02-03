@@ -35,7 +35,7 @@ export default function App() {
   const classes = `container theme-${color}`;
   //allows color to persist after refresh/shutdown
   localStorage.setItem('colorpref', JSON.stringify(color))
-
+  
   function handleChange(newColor) {
     setColor(newColor)
   };
@@ -55,17 +55,17 @@ export default function App() {
         <Bot />  
         <Art />
         <Tasker />
-
-        
-     
-       
         <div className="nine borders">9</div>
-      
-       
       </div>
     </>
   );
 }
+
+        
+     
+       
+      
+       
  
 
 

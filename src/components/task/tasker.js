@@ -83,7 +83,7 @@ export default function Tasker() {
  
 
     return (
-      <div className="tasks eight hov borders">
+      <div className="tasks eight hov borders3">
         <div className="borders taskbox">
           {taskChecker().map((task, index) => (
             <Task
