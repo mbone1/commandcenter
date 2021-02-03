@@ -112,15 +112,16 @@ export default class Art extends Component {
   };
   render() {
     return (
-      <div className="breatheContainer">
-        <div className="breatheContainerOne">
-          <Sketch setup={this.setup} draw={this.draw} />
-          <button
-            className="breatheBtn borders invert breatheText"
-            onClick={this.handleClick}>
-            <span className="breatheText">breathe</span>
-            
-          </button>
+      <div className="seven borders">
+        <div className="breatheContainer">
+          <div className="breatheContainerOne">
+            <Sketch setup={this.setup} draw={this.draw} />
+            <button
+              className="breatheBtn borders invert breatheText"
+              onClick={this.handleClick}>
+              <span className="breatheText">breathe</span>
+            </button>
+          </div>
         </div>
       </div>
     );

@@ -44,37 +44,24 @@ export default function App() {
     <>
       <div className={classes}>
         <Jukebox />
+        <div className="three borders threeContainer">
+        <Clock />
+        <ColorControls color={color} onChange={handleChange}/>
+        <Links />
+        <Adder />
+         </div>
+        <Pomodoro />
+        <AutoScheduler />
+        <Bot />  
+        <Art />
+        <Tasker />
 
         
      
-        <div className="three borders threeContainer">
-          <div className="borders threeOne">3.1</div>
-          <div className="borders threeTwo">3.2</div>
-          <div className="borders threeThree">3.3</div>
-          <div className="borders threeFour">3.4</div>
-         </div>
-        <div className="four borders">4</div>
-        <div className="five borders">5</div>
-        <div className="six borders">6</div>
-        <div className="seven borders">7</div>
-        <div className="eight borders">8</div>
+       
         <div className="nine borders">9</div>
-        {/* <Jukebox />
-        <Clock />
-        <Links />
-        <ColorControls color={color} onChange={handleChange}/> */}
-        {/* <div className="eleven borders hov">
-          <Adder />
-        </div> */}
-        {/* <Pomodoro /> */}
-        {/* <Tasker /> */}
-        {/* <div className="five toprow borders hov"> */}
-          {/* <Mori /> <Age /> */}
-          {/* <AutoScheduler />
-        </div>
-        <Bot />
-        <div className="seven borders hov"><Art/></div>
-        <Floaters /> */}
+      
+       
       </div>
     </>
   );

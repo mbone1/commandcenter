@@ -95,66 +95,70 @@ export default function AutoScheduler() {
   }
 
   return (
-    <div className="timecontainer">
-      <div className="borders timeBlock title invertConst">AUTO-SCHEDULER</div>
+    <div className="five borders">
+      <div className="timecontainer">
+        <div className="borders timeBlock title invertConst">
+          AUTO-SCHEDULER
+        </div>
 
-      <div className="borders timeBlock selectorBox">
-        <span className="selectorText"> premade shifts</span>
-        <br></br>
-        <div className="button-holder">
-          <button className="shift-button invert borders">siesta</button>
-          <button className="shift-button invert borders">straight 8</button>
-          <button className="shift-button invert borders">straight 6</button>
-          <button className="shift-button invert borders">straight 4</button>
-          <button className="shift-button invert borders">regular 8</button>
-          <button className="shift-button invert borders">regular 6</button>
-          <button className="shift-button invert borders">regular 4</button>
+        <div className="borders timeBlock selectorBox">
+          <span className="selectorText"> premade shifts</span>
+          <br></br>
+          <div className="button-holder">
+            <button className="shift-button invert borders">siesta</button>
+            <button className="shift-button invert borders">straight 8</button>
+            <button className="shift-button invert borders">straight 6</button>
+            <button className="shift-button invert borders">straight 4</button>
+            <button className="shift-button invert borders">regular 8</button>
+            <button className="shift-button invert borders">regular 6</button>
+            <button className="shift-button invert borders">regular 4</button>
+          </div>
+          <hr></hr>
+          <span className="shift-title">custom shift</span>
+          <br></br>
+          <button className="shift-button invert borders">create</button>
+          <br></br>
         </div>
-        <hr></hr>
-        <span className="shift-title">custom shift</span>
-        <br></br>
-        <button className="shift-button invert borders">create</button>
-        <br></br>
-      </div>
-      <div className="borders timeBlock taskBlock">
-        <div className="task-title borders invertConst">
-          select tasks for shift
+        <div className="borders timeBlock taskBlock">
+          <div className="task-title borders invertConst">
+            select tasks for shift
+          </div>
+          <div className="borders">
+            <div className="schedulerTaskBox">{unSelectedTasksHolder}</div>
+          </div>
         </div>
-        <div className="borders">
-          <div className="schedulerTaskBox">{unSelectedTasksHolder}</div>
+        <div className="borders timeBlock schedulerTaskBox taskBlock">
+          <div className="task-title borders invertConst">tasks selected</div>
+          {selectedTasksHolder}
         </div>
-      </div>
-      <div className="borders timeBlock schedulerTaskBox taskBlock">
-        <div className="task-title borders invertConst">tasks selected</div>
-        {selectedTasksHolder}
-      </div>
 
-      <div className="borders timeBlock">
-        <span className="options">
-          Current Shift Start : {startTimeEXAMPLE}
-        </span>
+        <div className="borders timeBlock">
+          <span className="options">
+            Current Shift Start : {startTimeEXAMPLE}
+          </span>
+          <br></br>
+          <span className="options">Lunch : beginning to end </span>
+          <br></br>
+          <span className="options">Current Shift End : {endTimeEXAMPLE}</span>
+          <br></br>
+          <button className="shift-button invert borders">begin</button>
+        </div>
+        <div className="borders pyramidHolder">
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+          <div className="borders block"></div>
+        </div>
         <br></br>
-        <span className="options">Lunch : beginning to end </span>
         <br></br>
-        <span className="options">Current Shift End : {endTimeEXAMPLE}</span>
         <br></br>
-        <button className="shift-button invert borders">begin</button>
       </div>
-      <div className="borders pyramidHolder">
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-        <div className="borders block"></div>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
     </div>
   );
 }

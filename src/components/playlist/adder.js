@@ -32,7 +32,7 @@ export default function Adder() {
     localStorage.setItem("playlist", JSON.stringify(listArray));
   }
   return (
-    <div>
+    <div className="threeFour">
       <form className="borders formAdder">
         <label className="">NAME </label>
         <input
