@@ -8,7 +8,7 @@ export default function ColorControls(props) {
     props.onChange(event.target.value)
   }
     return (
-      <div className="ten borders hov holder">
+      <div className="five2 borders hov holder">
         <button
           className="cButton white"
           name="color"

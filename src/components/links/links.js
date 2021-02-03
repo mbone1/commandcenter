@@ -37,7 +37,7 @@ export default function Links() {
 
 
     return (
-        <div className="nine borders hov links-holder">
+        <div className="four borders hov links-holder">
             <div>{listLinks}</div>
         
         </div>)

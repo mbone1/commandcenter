@@ -29,7 +29,7 @@ export default function Clock() {
     }
 
     return (
-      <div className="eight borders timecontainer">
+      <div className="three borders timecontainer">
         <div className="hov time borders invertConst">
           {DateTime.local()
             .setZone(location)
