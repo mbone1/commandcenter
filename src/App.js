@@ -19,6 +19,7 @@ import Mori from './components/memento/mori'
 import Age from './components/memento/age'
 import AutoScheduler from './components/autoscheduler/scheduler'
 import React, { useState } from "react";
+import { SourceProvider } from './components/playlist/source'
 
 const colorPref = () => {
   if (JSON.parse(localStorage.getItem('colorpref')) === null) {
@@ -43,19 +44,21 @@ export default function App() {
   return (
     <>
       <div className={classes}>
-        <Jukebox />
-        <div className="three borders threeContainer">
-        <Clock />
-        <ColorControls color={color} onChange={handleChange}/>
-        <Links />
-        <Adder />
-         </div>
-        <Pomodoro />
-        <AutoScheduler />
-        <Bot />  
-        <Art />
-        <Tasker />
-        <div className="nine borders">9</div>
+        <SourceProvider>
+          <Jukebox />
+          <div className="three borders threeContainer">
+            <Clock />
+            <ColorControls color={color} onChange={handleChange} />
+            <Links />
+            <Adder />
+          </div>
+          <Pomodoro />
+          <AutoScheduler />
+          <Bot />
+          <Art />
+          <Tasker />
+          <div className="nine borders">9</div>
+        </SourceProvider>
       </div>
     </>
   );

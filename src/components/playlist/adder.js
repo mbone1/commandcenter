@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useSourceStore } from "./source.js";
 import '../../stylesheets/adder.scss'
 
 export default function Adder() {
   const [video, setVideo] = useState({})
+  const [source, setSource] = useSourceStore()
   const handleChange = (e) => {
     //changes the value of video object to values entered in fields
     const { name, value } = e.target;
