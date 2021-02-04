@@ -59,10 +59,10 @@ export default function Adder() {
       </form>
       <div className="switchButtons">
         <button className="invert submitbutton borders" type="submit">
-          watch video
+          add video
         </button>
         <button className="invert submitbutton borders" type="submit">
-          add video
+          watch video
         </button>
         <button className="invert submitbutton borders" type="submit">
           add link
