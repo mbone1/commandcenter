@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 
@@ -8,7 +8,7 @@ export default function ColorControls(props) {
     props.onChange(event.target.value)
   }
     return (
-      <div className="threeTwo borders hov holder">
+      <div className="threeTwo borders3 hov holder">
         <button
           className="cButton white"
           name="color"

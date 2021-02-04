@@ -32,7 +32,7 @@ export default function Adder() {
     localStorage.setItem("playlist", JSON.stringify(listArray));
   }
   return (
-    <div className="threeFour">
+    <div className="threeFour borders">
       <form className="borders formAdder">
         <label className="">NAME </label>
         <input
@@ -50,10 +50,24 @@ export default function Adder() {
           value={video.value}
           onChange={handleChange}></input>
         <br></br>
-        <button className="invert submitbutton" type="submit" onClick={handleSubmit}>
+        <button
+          className="invert submitbutton borders3"
+          type="submit"
+          onClick={handleSubmit}>
           Submit
         </button>
       </form>
+      <div className="switchButtons">
+        <button className="invert submitbutton borders" type="submit">
+          watch video
+        </button>
+        <button className="invert submitbutton borders" type="submit">
+          add video
+        </button>
+        <button className="invert submitbutton borders" type="submit">
+          add link
+        </button>
+      </div>
     </div>
   );
 }

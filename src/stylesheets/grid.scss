@@ -32,11 +32,13 @@
     grid-row-gap: 0px;
     grid-template-columns: repeat(2, 200px);
     grid-template-rows: repeat(3, auto);
+    margin: auto auto auto auto;
 }
 
 .threeOne {
     grid-column: 1;
     grid-row: 1;
+    padding: 5px
 }
 
 .threeTwo {
@@ -52,6 +54,7 @@
 .threeFour {
     grid-column: 1/3;
     grid-row: 3;
+    height: 159px
 }
 
 //end of sub-container
