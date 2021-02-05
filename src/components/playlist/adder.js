@@ -4,7 +4,7 @@ import '../../stylesheets/adder.scss'
 
 export default function Adder() {
   const [video, setVideo] = useState({})
-  const [form, setForm] = useState()
+  const [form, setForm] = useState("Watch video")
   const [source, setSource] = useSourceStore()
   const handleChange = (e) => {
     //changes the value of video object to values entered in fields
@@ -23,6 +23,13 @@ export default function Adder() {
       Name: "",
       SRC: ""})
   }
+
+  const handleWatchVid = (e) => {
+    e.preventDefault();
+    console.log(e)
+    setSource()
+  }
+
   //function below saves to storage
   const saveToLocalStorage = (data) => {
     //creates empty array
@@ -36,7 +43,8 @@ export default function Adder() {
   }
   return (
     <div className="threeFour borders">
-      <form className="borders formAdder">
+      {/* form to add video to local storage */}
+      <form className={form === "Add video" ? "borders formAdder" : "hidden"}>
         <label className="">NAME </label>
         <input
           type="text"
@@ -61,6 +69,30 @@ export default function Adder() {
         </button>
         <span></span>
       </form>
+
+      {/* form to source of video, does not save video*/}
+      <form
+        type='submit'
+        className={form === "Watch video" ? "borders formAdder" : "hidden"}
+        onSubmit={handleWatchVid}>
+        <label>&nbsp;&nbsp;URL &nbsp;&nbsp;</label>
+        <input
+          type="text"
+          name="SRC"
+          className="borders"
+          // value={source}
+          ></input>
+        <button
+          className="invert submitbutton borders3"
+          type="submit">
+          {form}
+        </button>
+      </form>
+
+
+
+      {/* form to add link to local storage */}
+
       <div className="switchButtons">
         <button
           className="invert submitbutton borders"
