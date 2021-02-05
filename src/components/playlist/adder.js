@@ -4,6 +4,7 @@ import '../../stylesheets/adder.scss'
 
 export default function Adder() {
   const [video, setVideo] = useState({})
+  const [form, setForm] = useState()
   const [source, setSource] = useSourceStore()
   const handleChange = (e) => {
     //changes the value of video object to values entered in fields
@@ -56,17 +57,27 @@ export default function Adder() {
           className="invert submitbutton borders3"
           type="submit"
           onClick={handleSubmit}>
-          Submit
+          {form}
         </button>
+        <span></span>
       </form>
       <div className="switchButtons">
-        <button className="invert submitbutton borders" type="submit">
+        <button
+          className="invert submitbutton borders"
+          type="submit"
+          onClick={() => setForm("Add video")}>
           add video
         </button>
-        <button className="invert submitbutton borders" type="submit">
+        <button
+          className="invert submitbutton borders"
+          type="submit"
+          onClick={() => setForm("Watch video")}>
           watch video
         </button>
-        <button className="invert submitbutton borders" type="submit">
+        <button
+          className="invert submitbutton borders"
+          type="submit"
+          onClick={() => setForm("Add Link")}>
           add link
         </button>
       </div>
