@@ -1,30 +1,41 @@
 import '../../stylesheets/links.scss'
 
 
-let linkList = [
-    {
-        SRC: "https://github.com/mbone1",
-        Name: "GitHub"
-    },
-    {
-        SRC: "https://www.w3schools.com/",
-        Name: "w3schools"
-    }
-]
 
 
 const openInNewTab = (url) => {
-  const newWindow = window.open(
-    url,
-    "_blank",
-    "noopener,noreferrer,fullscreen=no"
-  );
-  if (newWindow) newWindow.opener = null;
-};
+    const newWindow = window.open(
+        url,
+        "_blank",
+        "noopener,noreferrer,fullscreen=no"
+        );
+        if (newWindow) newWindow.opener = null;
+    };
+    
+    
+    export default function Links() {
+        
+        let linkList = [
+            {
+                SRC: "https://github.com/mbone1",
+                Name: "GitHub"
+            },
+            {
+                SRC: "https://www.w3schools.com/",
+                Name: "w3schools"
+            }
+        ]
+        
+        const linkChecker = () => {
+            if (JSON.parse(localStorage.getItem('links')) === null) {
+                return linkList;
+            } else {
+                return JSON.parse(localStorage.getItem('links'));
+            }
+        }
 
 
-export default function Links() {
-    const listLinks = linkList.map((link) => (
+    const listLinks = linkChecker().map((link) => (
         <>
             <button
                 class="link links-button invert"
