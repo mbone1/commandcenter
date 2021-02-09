@@ -6,6 +6,7 @@ export default function Adder() {
   const [video, setVideo] = useState({})
   const [form, setForm] = useState("Watch video")
   const [source, setSource] = useSourceStore()
+  
   const handleChange = (e) => {
     //changes the value of video object to values entered in fields
     const { name, value } = e.target;
@@ -27,7 +28,7 @@ export default function Adder() {
   const handleWatchVid = (e) => {
     e.preventDefault();
     console.log(e)
-    setSource()
+    setSource(e.target[0].value);
   }
 
   //function below saves to storage

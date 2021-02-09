@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import defaultPlaylist from "../../playlists";
+import { useSourceStore } from "./source.js";
 
 export default function Jukebox() {
-  //variable created to swap 'src' and change video displayed
-  const [source, setSource] = useState();
+  //uses store created for source, can also be updated via adder component for one time add
+  const [source, setSource] = useSourceStore();
   
   // runs a check to see if any data is present in local storage, returns a default playlist if not
   const playlistChecker = () => {
