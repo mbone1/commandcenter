@@ -35,31 +35,38 @@ const saveToLocalStorage = (data) => {
   localStorage.setItem("playlist", JSON.stringify(listArray));
   };
     
-  return (
-    <form className='formAdder'>
-      <label className="">NAME </label>
-      <input
-        type="text"
-        name="Name"
-        className="borders"
-        value={video.name}
-        onChange={handleChange}></input>
-      <br></br>
-      <label>&nbsp;&nbsp;URL &nbsp;&nbsp;</label>
-      <input
-        type="text"
-        name="SRC"
-        className="borders"
-        value={video.value}
-        onChange={handleChange}></input>
-      <br></br>
-      <button
-        className="invert submitbutton borders3"
-        type="submit"
-        onClick={handleSubmit}>Add Video</button>
-      <span></span>
-    </form>
-  );
+    return (
+      <>
+        <p className="helptext invertConst">
+          please note : accepts embed code only
+        </p>
+        <form className="formAdder">
+          <label className="">NAME </label>
+          <input
+            type="text"
+            name="Name"
+            className="borders"
+            value={video.name}
+            onChange={handleChange}></input>
+          <br></br>
+          <label>&nbsp;&nbsp;URL &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            name="SRC"
+            className="borders"
+            value={video.value}
+            onChange={handleChange}></input>
+          <br></br>
+          <button
+            className="invert submitbutton borders3"
+            type="submit"
+            onClick={handleSubmit}>
+            Add Video
+          </button>
+          <span></span>
+        </form>
+      </>
+    );
 }
        
 
